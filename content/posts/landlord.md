@@ -5,4 +5,4 @@ tags:
   - writings
 ---
  
-playing landlord
+playing landlord for a rental property has not been easy

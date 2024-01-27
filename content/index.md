@@ -12,7 +12,7 @@ gen z computer engineer and tinkerer. working on product & infra systems.
 occasionally doing community work [@devcongress](https://twitter.com/devcongress).          
 
 
-my writings:   [[posts | writings]].    
+writings:   [[posts | writings]].    
 
 projects:   [[projects | projects]].    
 
