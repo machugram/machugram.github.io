@@ -1,6 +1,6 @@
 ---
 title: Shege as a new grad
-draft: false
+draft: true
 summary: transitioning from the student bubble into the real world
 tags:
   - writings

@@ -1,11 +1,12 @@
 ---
-title: It's all about the angle decisions pictures, videos and the world.
-draft: false
-summary: why opinions count
+title: It's all about the angle. 
+draft: true
+summary: why opinions count. 
+date:  2019-11-12
 tags:
   - writings
 ---
 
 
-KKK
+decisions pictures, videos and the world.
  

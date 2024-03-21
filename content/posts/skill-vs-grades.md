@@ -1,6 +1,6 @@
 ---
 title: Skill vs Grades ; the never ending argument
-draft: false
+draft: true
 summary:
 tags:
   - writings

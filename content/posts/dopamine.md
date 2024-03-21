@@ -1,6 +1,6 @@
 ---
 title: Dopamine
-draft: false
+draft: true
 summary: my findings on dopamine
 tags:
   - writings
