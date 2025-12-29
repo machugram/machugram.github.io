@@ -1,5 +1,5 @@
 ---
-title: "Asymptotic Analysis: Overview and Limitations"
+title: Asymptotic Analysis
 draft: false
 summary: "An overview of asymptotic analysis (Big O, Theta, Omega), why it matters, and its limitations in practice."
 date: 2021-07-17
