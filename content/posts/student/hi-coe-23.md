@@ -24,6 +24,6 @@ I tried to extend it to my hostel but knocking on everyone's door is tiring.
 
 ![Final Year Picture - A picture of a group of students forming the word C O E '23](../assets/images/coe-23.jpg) 
 
-<video width="400" height="300" controls autoplay>
-  <source src="../assets/videos/coe-23.MOV" type="video/mp4" alt="A video of a group of students forming COE'23">
+<video width="300" height="400" controls autoplay>
+  <source src="../../assets/videos/coe-23.MOV" type="video/mp4" alt="A video of a group of students forming COE'23">
 </video>
