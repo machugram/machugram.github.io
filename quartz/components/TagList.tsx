@@ -30,14 +30,14 @@ TagList.css = `
   list-style: none;
   display: flex;
   padding-left: 0;
-  gap: 0.4rem;
-  margin: 1rem 0;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0 0;
   flex-wrap: wrap;
-  justify-self: end;
+  justify-self: start;
 }
 
 .section-li > .section > .tags {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
   
 .tags > li {
@@ -48,10 +48,24 @@ TagList.css = `
 }
 
 a.internal.tag-link {
-  border-radius: 8px;
-  background-color: var(--highlight);
-  padding: 0.2rem 0.4rem;
-  margin: 0 0.1rem;
+  display: inline-block;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 1.5px solid var(--tertiary);
+  color: var(--tertiary);
+  padding: 0.25rem 0.65rem;
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: var(--tertiary);
+    color: var(--light);
+    transform: translateY(-1px);
+  }
 }
 `
 

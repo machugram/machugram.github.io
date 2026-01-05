@@ -18,7 +18,10 @@ section {
   background-color: var(--light);
   font-family: var(--bodyFont);
   color: var(--darkgray);
-}
+  /* Improved typography: slightly larger base font and comfortable line-height */
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.6;
+} 
 
 .text-highlight {
   background-color: #fff23688;
@@ -100,6 +103,12 @@ a {
   }
 
   & article {
+    /* Limit measure to improve readability on wide screens */
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem; /* 16px relative to body */
+
     & > h1 {
       font-size: 2rem;
     }
@@ -279,19 +288,21 @@ h6 {
 
 // typography improvements
 h1 {
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   margin-top: 2.25rem;
   margin-bottom: 1rem;
+  line-height: 1.15;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   margin-top: 1.9rem;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 h3 {
-  font-size: 1.12rem;
+  font-size: 1.25rem;
   margin-top: 1.62rem;
   margin-bottom: 1rem;
 }
@@ -302,7 +313,7 @@ h6 {
   font-size: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-}
+} 
 
 figure[data-rehype-pretty-code-figure] {
   margin: 0;
@@ -395,8 +406,8 @@ code {
 tbody,
 li,
 p {
-  line-height: 1.6rem;
-}
+  line-height: 1.6;
+} 
 
 .table-container {
   overflow-x: auto;

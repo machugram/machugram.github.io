@@ -4,6 +4,14 @@
   & > h3 {
     font-size: 1rem;
     margin: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  & .count {
+    color: var(--color-gray);
+    font-size: 0.9rem;
   }
 
   & > ul {
@@ -12,9 +20,35 @@
     margin: 0.5rem 0;
 
     & > li {
-      & > a {
-        background-color: transparent;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--color-lightgray);
+
+      &.no-backlinks {
+        font-style: italic;
+        color: var(--color-gray);
+      }
+
+      & > .backlink-title {
+        display: block;
+        font-weight: 600;
+        color: inherit;
+      }
+
+      & > .backlink-excerpt {
+        margin: 0.25rem 0 0;
+        color: var(--color-darkgray);
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+
+      &:last-child {
+        border-bottom: none;
       }
     }
+  }
+
+  &.inline {
+    margin-top: 1.5rem;
+    & > h3 { font-size: 0.95rem; }
   }
 }

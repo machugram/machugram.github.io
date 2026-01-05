@@ -38,7 +38,7 @@ export function PageList({ cfg, fileData, allFiles, limit }: Props) {
   return (
     <ul class="section-ul">
       {list.map((page) => {
-        const title = page.frontmatter?.title
+        const title = page.frontmatter?.displayTitle ?? page.frontmatter?.title
         const tags = page.frontmatter?.tags ?? []
 
         return (

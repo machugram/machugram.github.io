@@ -18,6 +18,8 @@ tags:
  - Ford V Ferrari(2019)
  - The Blacklist(2015) - Greatest Series Ever
  - Good Will Hunting(1997)
+ - Killers of the Flower Moon (2023)
+ - Knives Out(2019)
  
 
  
