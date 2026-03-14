@@ -4,7 +4,7 @@ import explorerStyle from "./styles/explorer.scss"
 // @ts-ignore
 import script from "./scripts/explorer.inline"
 import { ExplorerNode, FileNode, Options } from "./ExplorerNode"
-import { QuartzPluginData } from "../plugins/vfile"
+import { QuartzPluginData } from "../types/vfile"
 
 // Options interface defined in `ExplorerNode` to avoid circular dependency
 const defaultOptions = {

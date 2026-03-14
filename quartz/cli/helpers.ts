@@ -1,11 +1,12 @@
+import os from "os"
 import { isCancel, outro } from "@clack/prompts"
 import chalk from "chalk"
-import { contentCacheFolder } from "./constants.js"
+import { contentCacheFolder } from "./constants.ts"
 import { spawnSync } from "child_process"
 import fs from "fs"
 import { rimraf } from "rimraf"
 
-export function escapePath(fp) {
+export function escapePath(fp: string): string {
   return fp
     .replace(/\\ /g, " ") // unescape spaces
     .replace(/^".*"$/, "$1")
@@ -13,16 +14,16 @@ export function escapePath(fp) {
     .trim()
 }
 
-export function exitIfCancel(val) {
+export function exitIfCancel<T>(val: T | symbol): T {
   if (isCancel(val)) {
     outro(chalk.red("Exiting"))
     process.exit(0)
   } else {
-    return val
+    return val as T
   }
 }
 
-export async function stashContentFolder(contentFolder) {
+export async function stashContentFolder(contentFolder: string): Promise<void> {
   await fs.promises.rm(contentCacheFolder, { force: true, recursive: true })
   await fs.promises.cp(contentFolder, contentCacheFolder, {
     force: true,
@@ -33,7 +34,7 @@ export async function stashContentFolder(contentFolder) {
   await fs.promises.rm(contentFolder, { force: true, recursive: true })
 }
 
-export function gitPull(origin, branch) {
+export function gitPull(origin: string, branch: string): void {
   const flags = ["--no-rebase", "--autostash", "-s", "recursive", "-X", "ours", "--no-edit"]
   const out = spawnSync("git", ["pull", ...flags, origin, branch], { stdio: "inherit" })
   if (out.stderr) {
@@ -43,7 +44,7 @@ export function gitPull(origin, branch) {
   }
 }
 
-export async function popContentFolder(contentFolder) {
+export async function popContentFolder(contentFolder: string): Promise<void> {
   await fs.promises.rm(contentFolder, { force: true, recursive: true })
   await fs.promises.cp(contentCacheFolder, contentFolder, {
     force: true,
@@ -54,10 +55,10 @@ export async function popContentFolder(contentFolder) {
   await fs.promises.rm(contentCacheFolder, { force: true, recursive: true })
 }
 
-export async function rmrf(path) {
-  if (os.platform() == "win32") {
-    return rimraf.windows(path)
+export async function rmrf(fp: string): Promise<void> {
+  if (os.platform() === "win32") {
+    await rimraf.windows(fp)
   } else {
-    return rimraf(path)
+    await rimraf(fp)
   }
 }

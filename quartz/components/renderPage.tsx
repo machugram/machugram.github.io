@@ -6,7 +6,7 @@ import { JSResourceToScriptElement, StaticResources } from "../util/resources"
 import { FullSlug, RelativeURL, joinSegments, normalizeHastElement } from "../util/path"
 import { visit } from "unist-util-visit"
 import { Root, Element, ElementContent } from "hast"
-import { QuartzPluginData } from "../plugins/vfile"
+import { QuartzPluginData } from "../types/vfile"
 
 interface RenderComponents {
   head: QuartzComponent

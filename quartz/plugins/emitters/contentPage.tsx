@@ -38,6 +38,14 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
           containsIndex = true
         }
 
+        // Sub-folder index files (e.g. posts/index, projects/index) are used by
+        // FolderPage as folder descriptions and rendered with the file listing.
+        // Emitting them here as plain content pages causes a race condition when
+        // emitters run concurrently, resulting in the listing being overwritten.
+        if (slug !== "index" && slug.endsWith("/index")) {
+          continue
+        }
+
         const externalResources = pageResources(pathToRoot(slug), resources)
         const componentData: QuartzComponentProps = {
           fileData: file.data,

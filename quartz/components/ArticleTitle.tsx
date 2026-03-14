@@ -8,9 +8,15 @@ function ArticleTitle({ fileData, displayClass }: QuartzComponentProps) {
     return null
   }
 }
+
 ArticleTitle.css = `
 .article-title {
-  margin: 2rem 0 0 0;
+  margin: 2.5rem 0 0 0;
+  font-family: var(--headerFont);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--dark);
 }
 `
 

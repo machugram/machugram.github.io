@@ -1,5 +1,5 @@
 // @ts-ignore
-import { QuartzPluginData } from "../plugins/vfile"
+import { QuartzPluginData } from "../types/vfile"
 import {
   joinSegments,
   resolveRelative,

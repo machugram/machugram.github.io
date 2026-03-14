@@ -4,7 +4,7 @@ public/posts
 public/index.css
 public/index.html
 # .DS_Store
-# .env
+.env
 # public/projects
 # public/static
 # public/tags

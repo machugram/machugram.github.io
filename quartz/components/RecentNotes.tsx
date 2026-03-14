@@ -1,6 +1,6 @@
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { FullSlug, SimpleSlug, resolveRelative } from "../util/path"
-import { QuartzPluginData } from "../plugins/vfile"
+import { QuartzPluginData } from "../types/vfile"
 import { byDateAndAlphabetical } from "./PageList"
 import style from "./styles/recentNotes.scss"
 import { Date, getDate } from "./Date"

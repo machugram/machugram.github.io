@@ -6,7 +6,7 @@ import { FullPageLayout } from "../../cfg"
 import { FilePath, FullSlug } from "../../util/path"
 import { sharedPageComponents } from "../../../quartz.layout"
 import { NotFound } from "../../components"
-import { defaultProcessedContent } from "../vfile"
+import { defaultProcessedContent } from "../../types/vfile"
 
 export const NotFoundPage: QuartzEmitterPlugin = () => {
   const opts: FullPageLayout = {

@@ -15,6 +15,7 @@ Marbella - A popular resort city in southern Spain, famous for its Mediterranean
 Mallorca - The largest island in the Balearic Islands, Spain, known for its stunning coastline and vibrant nightlife.
 Dublin - The capital of Ireland, celebrated for its literary history and lively pub culture.
 Kilkenny - A historic city in Ireland, known for its medieval architecture and vibrant arts scene.
+Killiney - A picturesque suburb of Dublin, Ireland, famous for its scenic views and coastal walks.
 Bray - A coastal town in Ireland, popular for its scenic promenade and seaside attractions.
 Luxembourg City - The capital of Luxembourg, known for its fortified medieval old town and modern financial district.
 Brussels - The capital of Belgium and the European Union, famous for its historic architecture and international institutions.

@@ -1,7 +1,7 @@
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import breadcrumbsStyle from "./styles/breadcrumbs.scss"
 import { FullSlug, SimpleSlug, resolveRelative } from "../util/path"
-import { QuartzPluginData } from "../plugins/vfile"
+import { QuartzPluginData } from "../types/vfile"
 
 type CrumbData = {
   displayName: string

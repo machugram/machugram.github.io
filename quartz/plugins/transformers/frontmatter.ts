@@ -4,7 +4,7 @@ import { QuartzTransformerPlugin } from "../types"
 import yaml from "js-yaml"
 import toml from "toml"
 import { slugTag } from "../../util/path"
-import { QuartzPluginData } from "../vfile"
+import { QuartzPluginData } from "../../types/vfile"
 
 export interface Options {
   delims: string | string[]

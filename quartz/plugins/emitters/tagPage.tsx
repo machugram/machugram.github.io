@@ -3,7 +3,7 @@ import { QuartzComponentProps } from "../../components/types"
 import HeaderConstructor from "../../components/Header"
 import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
-import { ProcessedContent, defaultProcessedContent } from "../vfile"
+import { ProcessedContent, defaultProcessedContent } from "../../types/vfile"
 import { FullPageLayout } from "../../cfg"
 import {
   FilePath,

@@ -1,207 +1,389 @@
 @use "./base.scss";
 
-// Custom styles for enhanced minimalist design
+// ─────────────────────────────────────────────
+// TYPOGRAPHY
+// ─────────────────────────────────────────────
 
-// Enhanced article/post layout
 article {
-  // Better reading width
-  max-width: 70ch !important;
-  
-  // Improved heading hierarchy
   h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: var(--dark);
+    font-family: var(--headerFont);
   }
-  
+
   h2 {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.3;
     margin-top: 2.5rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     color: var(--dark);
-    border-bottom: 2px solid var(--lightgray);
-    padding-bottom: 0.5rem;
+    font-family: var(--headerFont);
   }
-  
+
   h3 {
-    font-size: 1.35rem;
+    font-size: 1.15rem;
     font-weight: 600;
     line-height: 1.4;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
     color: var(--dark);
   }
-  
+
   h4 {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 1.4;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--darkgray);
   }
-  
-  // Better paragraph spacing
+
   p {
-    margin-bottom: 1.25rem;
-    line-height: 1.7;
+    margin-bottom: 1.35rem;
+    line-height: 1.75;
   }
-  
-  // Enhanced lists
-  ul, ol {
+
+  ul,
+  ol {
     margin-bottom: 1.25rem;
     padding-left: 1.5rem;
-    
+
     li {
-      margin-bottom: 0.5rem;
-      line-height: 1.6;
+      margin-bottom: 0.4rem;
+      line-height: 1.7;
     }
   }
-  
-  // Better blockquotes
+
   blockquote {
-    border-left: 4px solid var(--tertiary);
-    padding-left: 1.5rem;
-    margin: 1.5rem 0;
+    border-left: 2px solid var(--darkgray);
+    padding: 0.1rem 1.5rem;
+    margin: 1.75rem 0;
     font-style: italic;
-    color: var(--darkgray);
-    background: var(--highlight);
-    padding: 1rem 1.5rem;
-    border-radius: 0 8px 8px 0;
+    color: var(--gray);
+    background: transparent;
+    border-radius: 0;
   }
-  
-  // Enhanced code blocks
+
   pre {
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 1.25rem !important;
     margin: 1.5rem 0;
     border: 1px solid var(--lightgray);
     overflow-x: auto;
-    
+
     code {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       line-height: 1.6;
     }
   }
-  
-  // Inline code
+
   :not(pre) > code {
     background: var(--highlight);
-    padding: 0.2rem 0.4rem;
+    padding: 0.15rem 0.4rem;
     border-radius: 4px;
-    font-size: 0.9em;
-    color: var(--tertiary);
+    font-size: 0.88em;
+    color: var(--darkgray);
     font-weight: 500;
   }
-  
-  // Better tables
+
   table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
-    
+
     th {
       background: var(--highlight);
-      padding: 0.75rem;
+      padding: 0.65rem 0.75rem;
       text-align: left;
       font-weight: 600;
-      border-bottom: 2px solid var(--tertiary);
+      border-bottom: 1px solid var(--lightgray);
+      font-size: 0.85rem;
     }
-    
+
     td {
-      padding: 0.75rem;
+      padding: 0.65rem 0.75rem;
       border-bottom: 1px solid var(--lightgray);
     }
-    
-    tr:hover {
-      background: var(--highlight);
+
+    tr:last-child td {
+      border-bottom: none;
     }
   }
-  
-  // Images
+
   img {
-    border-radius: 8px;
+    border-radius: 6px;
     max-width: 100%;
     height: auto;
     margin: 1.5rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
-  
-  // Horizontal rules
+
   hr {
     border: none;
-    border-top: 2px solid var(--lightgray);
+    border-top: 1px solid var(--lightgray);
     margin: 2.5rem 0;
   }
 }
 
-// Enhanced content meta (date, reading time)
+// ─────────────────────────────────────────────
+// CONTENT META  (date + reading time)
+// ─────────────────────────────────────────────
+
 .content-meta {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin: 1rem 0 2rem 0;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--lightgray);
+  margin: 0.35rem 0 1.75rem 0;
   color: var(--gray);
-  font-size: 0.9rem;
-  
-  time {
-    font-weight: 500;
-  }
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
 }
 
-// Better article title
+// ─────────────────────────────────────────────
+// ARTICLE TITLE
+// ─────────────────────────────────────────────
+
 .article-title {
-  margin-bottom: 0.5rem;
-  
+  margin-bottom: 0;
+
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
-    margin: 0 0 1rem 0;
+    margin: 0;
+    font-family: var(--headerFont);
+    color: var(--dark);
   }
 }
 
-// Smooth links in articles
+// ─────────────────────────────────────────────
+// LINKS IN ARTICLES
+// ─────────────────────────────────────────────
+
 article a:not(.tag-link) {
-  color: var(--tertiary);
+  color: var(--darkgray);
   text-decoration: underline;
-  text-decoration-color: transparent;
-  text-decoration-thickness: 2px;
+  text-decoration-color: var(--lightgray);
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: all 0.2s ease;
-  
+  transition: text-decoration-color 0.2s ease;
+  font-weight: 400;
+
   &:hover {
-    text-decoration-color: var(--tertiary);
+    text-decoration-color: var(--darkgray) !important;
+    color: var(--darkgray) !important;
   }
 }
 
-// Better table of contents
+// ─────────────────────────────────────────────
+// TAG LIST
+// ─────────────────────────────────────────────
+
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  .tag-link {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: var(--gray) !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0;
+
+    &::before {
+      content: "#";
+    }
+
+    &:hover {
+      color: var(--dark) !important;
+    }
+  }
+}
+
+// ─────────────────────────────────────────────
+// PAGE LIST  (writings / folder listing)
+// ─────────────────────────────────────────────
+
+.filter-tabs {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--lightgray);
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--gray);
+  padding: 0;
+  font-family: var(--bodyFont);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--dark);
+  }
+
+  &.active {
+    color: var(--dark);
+  }
+}
+
+ul.section-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.section-li {
+  margin-bottom: 2.25rem;
+
+  & > .section {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0 1.5rem;
+    align-items: baseline;
+
+    @media all and (max-width: 600px) {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+    }
+
+    & > .meta {
+      font-size: 0.75rem;
+      color: var(--gray);
+      font-weight: 400;
+      margin: 0;
+      padding-top: 0.35rem;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    & > .desc {
+      h3 {
+        margin: 0 0 0.3rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--dark);
+
+        a {
+          color: var(--dark) !important;
+          text-decoration: none !important;
+          background-color: transparent !important;
+          font-weight: 500;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: var(--gray) !important;
+          }
+        }
+      }
+
+      .post-description {
+        margin: 0;
+        font-size: 0.875rem;
+        color: var(--gray);
+        line-height: 1.5;
+      }
+    }
+
+    // hide the inline tags list on this view
+    & > .tags {
+      display: none;
+    }
+  }
+}
+
+// ─────────────────────────────────────────────
+// GRAPH VIEW (right panel)
+// ─────────────────────────────────────────────
+
+.graph > h3 {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+  font-family: var(--bodyFont);
+}
+
+// ─────────────────────────────────────────────
+// TABLE OF CONTENTS
+// ─────────────────────────────────────────────
+
 .toc {
-  background: var(--highlight);
-  border-radius: 8px;
-  padding: 1.5rem;
-  border: 1px solid var(--lightgray);
-  
-  ul {
-    li a {
-      transition: color 0.2s ease;
-      
-      &:hover {
-        color: var(--tertiary);
+  & > button {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    font-weight: 500;
+  }
+
+  & ul li a {
+    font-size: 0.8rem;
+    color: var(--gray);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--dark);
+    }
+  }
+}
+
+// ─────────────────────────────────────────────
+// DARKMODE + SEARCH placement
+// ─────────────────────────────────────────────
+
+.sidebar.left {
+  .darkmode {
+    margin: 0;
+  }
+
+  .search {
+    #search-icon {
+      p {
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--gray);
       }
     }
   }
 }
 
-// Smooth selection
-::selection {
-  background: var(--tertiary);
-  color: white;
+// ─────────────────────────────────────────────
+// HOME PAGE  (index)
+// ─────────────────────────────────────────────
+
+.page-header,
+.center {
+  h1.page-title {
+    display: none;
+  }
 }
+
+// ─────────────────────────────────────────────
+// SELECTION
+// ─────────────────────────────────────────────
+
+::selection {
+  background: color-mix(in srgb, var(--darkgray) 15%, transparent);
+  color: var(--dark);
+}
+
