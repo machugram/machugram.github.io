@@ -1,16 +1,6 @@
 node_modules
-public/assets
-public/posts
-public/index.css
-public/index.html
-# .DS_Store
+public
+quartz/.quartz-cache
+**/.DS_Store
 .env
-# public/projects
-# public/static
-# public/tags
-# 404.html
-# index.xml
-# postscripts.js
-# sitemap.xml
-# prescripts.js
 .npm-cache
