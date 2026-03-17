@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
  
 permissions:
   contents: read
@@ -13,17 +14,22 @@ permissions:
  
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
  
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Fetch all history for git info
-      
-      - uses: actions/setup-node@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
