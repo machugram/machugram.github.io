@@ -20,6 +20,8 @@ tags:
  - Good Will Hunting(1997)
  - Killers of the Flower Moon (2023)
  - Knives Out(2019)
+ - Crime 101 (2026)
+ - Project Hail Mary (2026)
  
 
  
