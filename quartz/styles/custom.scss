@@ -1,5 +1,11 @@
 @use "./base.scss";
 
+body {
+  background:
+    radial-gradient(1100px 420px at 100% -120px, color-mix(in srgb, var(--highlight) 45%, transparent), transparent 65%),
+    var(--light);
+}
+
 // ─────────────────────────────────────────────
 // TYPOGRAPHY
 // ─────────────────────────────────────────────
@@ -44,7 +50,8 @@ article {
 
   p {
     margin-bottom: 1.35rem;
-    line-height: 1.75;
+    line-height: 1.72;
+    font-size: 1.05rem;
   }
 
   ul,
@@ -147,8 +154,9 @@ article {
   margin-bottom: 0;
 
   h1 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.015em;
     line-height: 1.2;
     margin: 0;
     font-family: var(--headerFont);
@@ -163,15 +171,15 @@ article {
 article a:not(.tag-link) {
   color: var(--darkgray);
   text-decoration: underline;
-  text-decoration-color: var(--lightgray);
+  text-decoration-color: color-mix(in srgb, var(--highlight) 65%, var(--gray));
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: text-decoration-color 0.2s ease;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
   font-weight: 400;
 
   &:hover {
-    text-decoration-color: var(--darkgray) !important;
-    color: var(--darkgray) !important;
+    text-decoration-color: var(--tertiary) !important;
+    color: var(--dark) !important;
   }
 }
 
@@ -383,7 +391,7 @@ li.section-li {
 // ─────────────────────────────────────────────
 
 ::selection {
-  background: color-mix(in srgb, var(--darkgray) 15%, transparent);
+  background: color-mix(in srgb, var(--highlight) 65%, transparent);
   color: var(--dark);
 }
 
