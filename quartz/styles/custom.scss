@@ -190,27 +190,32 @@ article a:not(.tag-link) {
 .tags {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.5rem 0;
+  margin: 0.45rem 0 1.35rem 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 6px;
 
   .tag-link {
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    color: var(--gray) !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.005em !important;
+    color: var(--tertiary) !important;
     text-decoration: none !important;
-    background: transparent !important;
-    text-transform: uppercase;
-    font-weight: 500;
-    padding: 0;
+    background: color-mix(in srgb, var(--tertiary) 12%, transparent) !important;
+    border: none !important;
+    text-transform: none !important;
+    font-weight: 500 !important;
+    padding: 1px 7px !important;
+    border-radius: 4px !important;
+    line-height: 1.45 !important;
 
     &::before {
-      content: "#";
+      content: none !important;
     }
 
     &:hover {
       color: var(--dark) !important;
+      background: color-mix(in srgb, var(--tertiary) 20%, transparent) !important;
+      transform: none !important;
     }
   }
 }

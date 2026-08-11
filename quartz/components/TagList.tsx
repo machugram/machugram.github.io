@@ -8,12 +8,11 @@ function TagList({ fileData, displayClass }: QuartzComponentProps) {
     return (
       <ul class={`tags ${displayClass ?? ""}`}>
         {tags.map((tag) => {
-          const display = `#${tag}`
           const linkDest = baseDir + `/tags/${slugTag(tag)}`
           return (
             <li>
               <a href={linkDest} class="internal tag-link">
-                {display}
+                {tag}
               </a>
             </li>
           )
@@ -30,8 +29,8 @@ TagList.css = `
   list-style: none;
   display: flex;
   padding-left: 0;
-  gap: 0.5rem;
-  margin: 0.75rem 0 0 0;
+  gap: 6px;
+  margin: 0.5rem 0 0 0;
   flex-wrap: wrap;
   justify-self: start;
 }
@@ -39,7 +38,7 @@ TagList.css = `
 .section-li > .section > .tags {
   justify-content: flex-start;
 }
-  
+
 .tags > li {
   display: inline-block;
   white-space: nowrap;
@@ -49,22 +48,24 @@ TagList.css = `
 
 a.internal.tag-link {
   display: inline-block;
-  border-radius: 6px;
-  background-color: transparent;
-  border: 1.5px solid var(--tertiary);
+  border: none;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, var(--tertiary) 12%, transparent);
   color: var(--tertiary);
-  padding: 0.25rem 0.65rem;
+  padding: 1px 7px;
   margin: 0;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  transition: all 0.2s ease;
-  
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.005em;
+  text-decoration: none;
+  line-height: 1.45;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
   &:hover {
-    background-color: var(--tertiary);
-    color: var(--light);
-    transform: translateY(-1px);
+    background-color: color-mix(in srgb, var(--tertiary) 20%, transparent);
+    color: var(--dark);
+    transform: none;
   }
 }
 `
