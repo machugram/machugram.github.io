@@ -3,6 +3,7 @@ title: Dopamine
 draft: true
 summary: my findings on dopamine
 tags:
+  - personal
   - writings
 ---
  

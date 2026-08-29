@@ -3,6 +3,7 @@ title: Year Review ":" 2021
 draft: true
 date : 2021-12-27
 tags:
+  - personal
   - writings
 ---
 

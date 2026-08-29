@@ -2,6 +2,7 @@
 title: Would it be different?
 draft: true
 tags:
+  - personal
   - student
   - writings
 ---

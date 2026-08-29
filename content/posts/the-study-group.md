@@ -3,6 +3,7 @@ title: The Study Group
 draft: true
 date : 2023-12-20
 tags:
+  - personal
   - writings
 ---
  
