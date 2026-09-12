@@ -221,38 +221,8 @@ article a:not(.tag-link) {
 }
 
 // ─────────────────────────────────────────────
-// PAGE LIST  (writings / folder listing)
+// PAGE LIST  (folder listing)
 // ─────────────────────────────────────────────
-
-.filter-tabs {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--lightgray);
-}
-
-.filter-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: var(--gray);
-  padding: 0;
-  font-family: var(--bodyFont);
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: var(--dark);
-  }
-
-  &.active {
-    color: var(--dark);
-  }
-}
 
 ul.section-ul {
   list-style: none;

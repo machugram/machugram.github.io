@@ -1,4 +1,4 @@
-import { FullSlug, resolveRelative } from "../util/path"
+import { resolveRelative } from "../util/path"
 import { QuartzPluginData } from "../types/vfile"
 import { Date, getDate } from "./Date"
 import { QuartzComponentProps } from "./types"
@@ -25,27 +25,6 @@ export function byDateAndAlphabetical(
   }
 }
 
-// Tags that denote a tech post
-const TECH_TAGS = new Set([
-  "networking",
-  "protocols",
-  "security",
-  "tech-history",
-  "linux",
-  "open-source",
-  "experiments",
-  "tech",
-])
-
-function deriveCategory(page: QuartzPluginData): string {
-  const slug = page.slug ?? ""
-  const tags = (page.frontmatter?.tags ?? []) as string[]
-  if (slug.includes("/tech/") || tags.some((t) => TECH_TAGS.has(t))) {
-    return "tech"
-  }
-  return "personal"
-}
-
 type Props = {
   limit?: number
 } & QuartzComponentProps
@@ -56,31 +35,15 @@ export function PageList({ cfg, fileData, allFiles, limit }: Props) {
     list = list.slice(0, limit)
   }
 
-  const showFilterTabs = !limit // only show filters on full listing pages
-
   return (
     <div class="page-list-container">
-      {showFilterTabs && (
-        <div class="filter-tabs">
-          <button class="filter-btn active" data-filter="all">
-            All
-          </button>
-          <button class="filter-btn" data-filter="tech">
-            Tech
-          </button>
-          <button class="filter-btn" data-filter="personal">
-            Personal
-          </button>
-        </div>
-      )}
       <ul class="section-ul" id="posts-list">
         {list.map((page) => {
           const title = page.frontmatter?.displayTitle ?? page.frontmatter?.title
           const description = page.frontmatter?.description ?? page.description
-          const category = deriveCategory(page)
 
           return (
-            <li class="section-li" data-category={category}>
+            <li class="section-li">
               <div class="section">
                 {page.dates && (
                   <p class="meta">

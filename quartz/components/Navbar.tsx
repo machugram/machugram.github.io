@@ -1,7 +1,5 @@
 import { pathToRoot, joinSegments } from "../util/path"
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
-// @ts-ignore: inline scripts are bundled separately by Quartz
-import script from "./scripts/navbar.inline"
 
 function Navbar({ fileData, cfg, displayClass }: QuartzComponentProps) {
   const title = cfg?.pageTitle ?? "Untitled"
@@ -14,8 +12,11 @@ function Navbar({ fileData, cfg, displayClass }: QuartzComponentProps) {
         </a>
       </div>
       <div class="navbar-links">
-        <a href={joinSegments(baseDir, "posts")} class="nav-link">
-          WRITINGS
+        <a href={joinSegments(baseDir, "tech")} class="nav-link">
+          TECH
+        </a>
+        <a href={joinSegments(baseDir, "writing")} class="nav-link">
+          WRITING
         </a>
         <a href={joinSegments(baseDir, "projects")} class="nav-link">
           PROJECTS
@@ -24,8 +25,6 @@ function Navbar({ fileData, cfg, displayClass }: QuartzComponentProps) {
     </nav>
   )
 }
-
-Navbar.afterDOMLoaded = script
 
 Navbar.css = `
 .navbar {
