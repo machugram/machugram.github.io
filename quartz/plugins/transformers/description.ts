@@ -19,7 +19,8 @@ export const Description: QuartzTransformerPlugin<Partial<Options> | undefined> 
       return [
         () => {
           return async (tree: HTMLRoot, file) => {
-            const frontMatterDescription = file.data.frontmatter?.description
+            const frontMatterDescription =
+              file.data.frontmatter?.description || file.data.frontmatter?.summary
             const text = escapeHTML(toString(tree))
 
             const desc = frontMatterDescription ?? text

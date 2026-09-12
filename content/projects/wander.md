@@ -1,5 +1,6 @@
 ---
 title: Wander - iOS Travel Companion
+summary: "An iOS travel companion for itineraries, places, and staying oriented."
 draft: false
 date:  2025-11-15
 ---

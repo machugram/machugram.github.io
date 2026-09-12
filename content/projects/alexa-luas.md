@@ -1,5 +1,6 @@
 ---
 title: Alexa Luas — Voice Departures for Dublin Trams
+summary: An Alexa skill for live Dublin Luas times. It does not invent departures.
 draft: false
 date:  2026-08-31
 ---

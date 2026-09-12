@@ -40,7 +40,8 @@ export function PageList({ cfg, fileData, allFiles, limit }: Props) {
       <ul class="section-ul" id="posts-list">
         {list.map((page) => {
           const title = page.frontmatter?.displayTitle ?? page.frontmatter?.title
-          const description = page.frontmatter?.description ?? page.description
+          const description =
+            page.frontmatter?.summary || page.frontmatter?.description || page.description
 
           return (
             <li class="section-li">

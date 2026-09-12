@@ -1,5 +1,6 @@
 ---
 title: Writing
+summary: "Personal notes, lists, and gardens."
 draft: false
 tags:
   - writings
@@ -8,4 +9,4 @@ aliases:
   - ../posts/index
 ---
  
-welcome to the digital pen garden
+Personal notes, lists, and gardens.

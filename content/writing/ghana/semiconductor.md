@@ -2,7 +2,7 @@
 title: OSOC - Ghana's Semiconductor Ambitions from my perspective.
 draft: false
 date: 2026-03-01 
-summary: A pragmatic national strategy for building Ghana's semiconductor capabilities through OSAT, talent development, and regional positioning.
+summary: "Ghana should not build fabs. OSAT, talent, and regional positioning are the realistic path."
 tags:
   - ghana
   - semiconductors
@@ -30,6 +30,6 @@ Ghana shouldn't build fabs—that window closed decades ago. But there's a reali
 **Leverage mining expertise.** Ghana already extracts and refines metals. The electronics supply chain has gaps we can fill without bleeding-edge tech.
 
 ## The Blunt Truth
-This isn't about competing with Taiwan. It's about capturing 0.1% of a $600B industry—$600M would transform Ghana's tech sector. Ethiopia and Kenya are planning similar moves. The country that executes fastest wins.
+This isn't about competing with Taiwan. It's about capturing 0.1% of a 600 billion dollar industry. 600 million would transform Ghana's tech sector. Ethiopia and Kenya are planning similar moves. The country that executes fastest wins.
 
 Start with one facility, prove the model, scale gradually. No grand pronouncements, just ruthless execution on a narrow strategy that actually works.

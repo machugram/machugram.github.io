@@ -2,7 +2,7 @@
 title: "AWS II Cloud Practitioner Exams — Sub Saharan Africa Challenge"
 displayTitle: "AWS Cloud Practitioner — SSA"
 draft: false
-summary: "Tips and resources I used to prepare for and pass the AWS Cloud Practitioner exam during the Sub‑Saharan Africa Challenge."
+summary: "How I prepared for the AWS Cloud Practitioner exam during the Sub-Saharan Africa Challenge."
 date: 2021-11-05
 tags:
 aliases:

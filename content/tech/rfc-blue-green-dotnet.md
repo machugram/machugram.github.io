@@ -1,5 +1,6 @@
 ---
 title: "RFC: Two Folders and a Live Path"
+summary: "Blue-green folders and a live path as the on-ramp from .NET 4.8 to .NET 10, on a small farm."
 date: 2026-09-10
 tags:
   - rfc
