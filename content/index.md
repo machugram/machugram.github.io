@@ -15,5 +15,5 @@ software engineer focused on product systems that have to be correct under regul
 
 **looking for** — product & platform  engineering roles with ownership over complex domains — fintech, markets, regulated platforms, or infra that product teams depend on
 
-[[posts | writings]] · [[projects | projects]] .
-[[posts/ghana | ghana]] . [[posts/global | global]] .
+[[tech | tech]] · [[projects | projects]]
+[[writing | writing]] · [[writing/ghana | ghana]] · [[writing/global | global]]

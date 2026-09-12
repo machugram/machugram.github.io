@@ -1,0 +1,32 @@
+---
+title: Movies
+draft: false
+date: 2023-03-01 
+summary:
+tags:
+  - personal
+  - writings
+aliases:
+  - ../../posts/lists/movies
+---
+ 
+ - The Mist(2007)
+ - Interstellar(2014)
+ - Wolf of Wall Street(2013)
+ - Rush (2013)
+ - F1 (2025)
+ - Shame(2024)
+ - Shawshank Redemption(1994)
+ - The Green Mile(1999)
+ - Ford V Ferrari(2019)
+ - The Blacklist(2015) - Greatest Series Ever
+ - Good Will Hunting(1997)
+ - Killers of the Flower Moon (2023)
+ - Knives Out(2019)
+ - Crime 101 (2026)
+ - Project Hail Mary (2026)
+ - Jerry Maguire(1996)
+ 
+
+ 
+ 
