@@ -1,5 +1,6 @@
 ---
 title: Building Awtsyde (Part 1) — Why I Started Joined
+summary: "Why I joined Awtsyde: winter, racquet sports, and the logistics that get in the way of playing."
 date: 2026-08-21
 tags:
   - awtsyde
@@ -8,8 +9,6 @@ draft: false
 aliases:
   - ../posts/tech/building-awtsyde
 ---
-
-# Building Awtsyde (Part 1) — Why I Started Joined
 
 *Part 1 of 4 — [Part 2: The product on the phone](./building-awtsyde-part-2) *
 

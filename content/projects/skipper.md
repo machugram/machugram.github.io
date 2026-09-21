@@ -1,5 +1,6 @@
 ---
 title: Skipper 
+summary: "Fuzzy-search your SSH config and connect without memorizing host aliases."
 draft: false
 date:  2026-04-03
 github: https://github.com/machugram/skipper

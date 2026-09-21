@@ -1,5 +1,6 @@
 ---
 title: Luas — Digital Leap Pass
+summary: "Architecture for moving Ireland's Leap Card onto a phone."
 draft: false
 date:  2026-03-17
 ---

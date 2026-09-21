@@ -1,8 +1,9 @@
 ---
 title: Projects
+summary: Tools and experiments I have shipped.
 draft: false
 tags:
   - projects
 ---
  
-welcome to my digital project hub
+Tools and experiments I have shipped.

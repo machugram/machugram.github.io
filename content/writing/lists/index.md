@@ -1,5 +1,6 @@
 ---
 title: Lists
+summary: "Running lists of movies, places, and things to read."
 draft: false
 aliases:
   - ../../posts/lists

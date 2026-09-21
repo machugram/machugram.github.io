@@ -1,5 +1,6 @@
 ---
 title: Unhappy - Final Semester
+summary: "Final semester, six cedis in coins, and the pressure of graduating into a thin job market."
 draft: false
 date : 2023-07-20
 tags:

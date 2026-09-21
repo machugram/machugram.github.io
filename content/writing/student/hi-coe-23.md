@@ -1,7 +1,7 @@
 ---
 title: Say Hi -  COE'23
 draft: false
-summary: Saying Hi to all my classmates
+summary: "A hello to COE '23."
 date: 2023-03-01 
 tags:
   - personal

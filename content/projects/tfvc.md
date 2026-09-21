@@ -1,5 +1,6 @@
 ---
 title: TFVC — Source Control for Cursor and VS Code
+summary: Team Foundation Version Control in the Cursor and VS Code Source Control view.
 draft: false
 date:  2026-09-03
 github: https://github.com/machugram/tf-extension

@@ -1,5 +1,6 @@
 ---
 title: tfai — Dublin Luas Companion
+summary: "A SwiftUI Luas companion: NFC Leap Card, journey log, map, and should-I-leave-now."
 draft: false
 date:  2026-07-27
 github: https://github.com/machugram/tfai

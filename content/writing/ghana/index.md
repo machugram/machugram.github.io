@@ -1,5 +1,6 @@
 ---
 title: Ghana
+summary: Notes on Ghana.
 draft: false
 aliases:
   - ../../posts/ghana

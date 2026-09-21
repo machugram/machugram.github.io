@@ -1,5 +1,6 @@
 ---
 title: Preparing for the Autonomous Fleet (Part 2)
+summary: What to build before autonomous coding agents are driving changes through production.
 date: 2026-08-11
 tags:
   - ai
@@ -10,8 +11,6 @@ draft: false
 aliases:
   - ../posts/tech/code-highway-part-2
 ---
-
-# Preparing for the Autonomous Fleet
 
 *Part 2 of 2 — [Part 1: When Software Starts Driving Itself](./code-highway)*
 

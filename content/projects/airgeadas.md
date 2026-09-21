@@ -1,5 +1,6 @@
 ---
 title: Airgeadas — Household Finance Planner
+summary: "A browser household planner: Irish take-home next to rent, bills, and leftover pots."
 draft: false
 date:  2026-09-03
 github: https://github.com/machugram/airgeadas

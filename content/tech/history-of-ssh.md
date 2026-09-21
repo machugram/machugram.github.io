@@ -1,5 +1,6 @@
 ---
 title: The True History of SSH - How a Password Sniffer Led to Secure Remote Access
+summary: A password sniffer at a Finnish university is why we have SSH.
 date: 2026-03-12
 tags:
   - tech-history
@@ -10,8 +11,6 @@ draft: false
 aliases:
   - ../posts/tech/history-of-ssh
 ---
-
-# The True History of SSH
 
 In early 1995, a password-sniffing attack swept through the network at Helsinki University of Technology in Finland. Someone had installed packet sniffers on the university's network, capturing thousands of passwords—including several belonging to a young researcher named Tatu Ylönen. This security breach would spark one of the most important developments in network security history.
 

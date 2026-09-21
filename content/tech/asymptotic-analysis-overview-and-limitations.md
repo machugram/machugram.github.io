@@ -1,7 +1,7 @@
 ---
 title: Asymptotic Analysis
 draft: false
-summary: "An overview of asymptotic analysis (Big O, Theta, Omega), why it matters, and its limitations in practice."
+summary: "Big O, Theta, and Omega: what asymptotic analysis measures, and where it stops being useful."
 date: 2021-07-17
 tags:
 aliases:

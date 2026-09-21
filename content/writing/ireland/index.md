@@ -1,5 +1,6 @@
 ---
 title: Ireland
+summary: "Living in Ireland: Docklands, and the culture around it."
 draft: false
 tags:
   - ireland, dublin
