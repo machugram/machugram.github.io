@@ -9,4 +9,4 @@ software engineer. currently at [Bank of America](https://www.bankofamerica.com)
 
 looking for product & platform engineering with ownership over complex domains — fintech, markets, regulated platforms, or infra that product teams depend on.
 
-[github](https://github.com/machugram) · [linkedin](https://www.linkedin.com/in/rexfordmachu)
+[github](https://github.com/machugram) · [linkedin](https://www.linkedin.com/in/rexfordmachu) · [cursor](https://cursor.com/@findrex)
