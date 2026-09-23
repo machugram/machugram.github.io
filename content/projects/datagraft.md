@@ -1,5 +1,6 @@
 ---
 title: Datagraft — Git Checkout for Live Postgres
+summary: "git checkout for a live Postgres: fork origin into an isolated server, optionally ~N rows."
 draft: false
 date:  2026-09-03
 github: https://github.com/machugram/datagraft

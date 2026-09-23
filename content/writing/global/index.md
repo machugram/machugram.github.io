@@ -1,5 +1,6 @@
 ---
 title: Global
+summary: Notes from elsewhere.
 draft: false
 tags:
   - global

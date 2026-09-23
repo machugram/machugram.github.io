@@ -1,5 +1,6 @@
 ---
 title: Mini DBaas - Self-Service Postgres on Demand.
+summary: "Self-service Postgres on demand: isolated containers, quotas, and credential rotation."
 draft: false
 date:  2026-07-05
 github: https://github.com/machugram/minidbaas

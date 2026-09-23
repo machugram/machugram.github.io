@@ -1,5 +1,6 @@
 ---
 title: Sentinel - Job Orchestration. 
+summary: "C# job orchestration in the Autosys shape: define, schedule, and watch work."
 draft: false
 date:  2026-03-26
 github: https://github.com/machugram/sentinel

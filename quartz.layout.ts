@@ -7,7 +7,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/machugram",
+      GitHub: "https://github.com/machugram"
     },
   }),
 }
@@ -33,7 +33,7 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [Component.ArticleTitle()],
   left: [
     Component.Navbar(),
     Component.MobileOnly(Component.Spacer()),

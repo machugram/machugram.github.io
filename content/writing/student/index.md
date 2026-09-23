@@ -1,5 +1,6 @@
 ---
 title: Student
+summary: "Student-life notes and advice."
 draft: false
 aliases:
   - ../../posts/student
