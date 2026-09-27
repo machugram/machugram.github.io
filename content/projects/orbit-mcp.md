@@ -1,5 +1,5 @@
 ---
-title: Orbit - Agentic VM Orchestration.
+title: Orbit — Agentic VM Orchestration
 summary: "An MCP server that gives agents disposable Linux VMs, with SSH keys and a secret vault."
 draft: false
 date:  2026-06-19

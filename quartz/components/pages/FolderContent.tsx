@@ -30,15 +30,22 @@ function FolderContent(props: QuartzComponentProps) {
       ? fileData.description
       : htmlToJsx(fileData.filePath!, tree)
 
+  // Projects index is a curated showcase; skip the duplicate auto listing.
+  const skipAutoList = folderSlug === "projects"
+
   return (
     <div class="popover-hint">
       <article>
         <p>{content}</p>
       </article>
-      <p>{pluralize(allPagesInFolder.length, "item")} under this folder.</p>
-      <div>
-        <PageList {...listProps} />
-      </div>
+      {!skipAutoList && (
+        <>
+          <p>{pluralize(allPagesInFolder.length, "item")} under this folder.</p>
+          <div>
+            <PageList {...listProps} />
+          </div>
+        </>
+      )}
     </div>
   )
 }
