@@ -1,12 +1,13 @@
 ---
 title: The stack
-summary: Living notes on the tools I actually ship with
+summary: "Living stack notes — C#, and the Linux, Docker, Kubernetes, and infra tools I ship with."
 date: 2026-09-21
 draft: false
 tags:
   - stack
+  - infrastructure
 ---
 
-Notes on the stack I keep choosing. Not a resume list. The interesting parts, rewritten when the opinion changes.
+Notes on the tools I keep choosing. Rewritten when the opinion changes.
 
-Starts with [C#](./csharp).
+- [[tech/stack/csharp | C#]] — contracts, async, LINQ, dispose, and the two .NET runtimes

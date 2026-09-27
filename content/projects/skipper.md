@@ -1,5 +1,5 @@
 ---
-title: Skipper 
+title: Skipper — Interactive SSH Host Picker
 summary: "Fuzzy-search your SSH config and connect without memorizing host aliases."
 draft: false
 date:  2026-04-03

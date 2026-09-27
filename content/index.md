@@ -1,12 +1,17 @@
 ---
 title: rex.
+summary: "Rexford Machu — Software Engineer at Bank of America, Dublin. Product, platform, and SRE-shaped systems for regulated markets and short-sale disclosure. Open to product, platform, SRE, and finance engineering roles."
 draft: false
 ---
 
-software engineer. currently at [Bank of America](https://www.bankofamerica.com) in dublin, on product systems that have to be correct under regulation — short-sale disclosure across jurisdictions.
+**Rexford Machu** — software engineer at [Bank of America](https://www.bankofamerica.com) in Dublin.
 
-[[tech/rfc-blue-green-dotnet | RFC: two folders and a live path]] · [[projects/datagraft | Datagraft]]
+Product and platform engineering for **short selling regulatory reporting** across jurisdictions: Equity Position and Monitoring (EPMD) flows that keep global short-sale disclosure accurate, auditable, and on time.
 
-looking for product & platform engineering with ownership over complex domains — fintech, markets, regulated platforms, or infra that product teams depend on.
+**Stack** — Go · Python · TypeScript · C# · Swift · Kubernetes · Kafka · PostgreSQL · AWS · Terraform · Docker
 
-[github](https://github.com/machugram) · [linkedin](https://www.linkedin.com/in/rexfordmachu) · [cursor](https://cursor.com/@findrex)
+**Builds** — [[projects/datagraft | Datagraft]] (Postgres branching) · [[projects/orbit-mcp | Orbit]] (agent VMs) · [[projects/mdbaas | Mini DBaaS]] (self-service Postgres) · [[projects/wander | Wander]] (iOS travel) · [[projects | all projects]]
+
+**Open to** — Software Engineer, Platform Engineer, SRE, Product Engineer, or finance / fintech roles in markets, financial systems, regulated platforms, or reliability.
+
+[GitHub](https://github.com/machugram) · [LinkedIn](https://www.linkedin.com/in/rexfordmachu) · [Cursor](https://cursor.com/@findrex) · [[tech | Tech]] · [[tech/stack | Stack notes]]
