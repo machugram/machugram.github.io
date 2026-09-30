@@ -1,12 +1,12 @@
 ---
 title: OrbStack Provider — Terraform for the Mac
-summary: "A Terraform provider for OrbStack: Linux machines through orbctl, containers through the local Docker engine."
+summary: "A from-scratch Terraform provider so homelab setups, starting with OrbStack, have a trail in .tf files."
 draft: false
 date:  2026-10-01
 github: https://github.com/machugram/terraform-provider-orbstack
 ---
 
-**OrbStack Provider** is a Terraform provider for [OrbStack](https://orbstack.dev) on macOS. It creates Linux machines through `orbctl` and containers through the Docker engine OrbStack already runs. Published as [`machugram/orbstack`](https://registry.terraform.io/providers/machugram/orbstack/latest) `0.1.2`.
+**OrbStack Provider** is a Terraform provider I wrote from scratch so a homelab has a trail. The first setups that needed it were on [OrbStack](https://orbstack.dev): Linux machines through `orbctl`, and containers through the Docker engine it already runs. Published as [`machugram/orbstack`](https://registry.terraform.io/providers/machugram/orbstack/latest) `0.1.2`.
 
 ```hcl
 resource "orbstack_machine" "dev" {
@@ -28,11 +28,13 @@ The longer writeup of the lifecycle rules is [[tech/orbstack-terraform | Two Con
 
 ## Why I built it
 
-I already use OrbStack for a Linux machine and for containers on this Mac. I wanted those in Terraform.
+Thinking about a homelab, I realized the setups had no trail. A machine I built last month lived in whatever commands I still remembered. Terraform is the trail: the file is the setup, `plan` shows the drift, `apply` rebuilds it, `destroy` takes it down.
 
-The community OrbStack provider creates a machine and reads `orb info`. CPU, memory, disk, isolation, and mounts stay on the CLI. The Docker provider can run the container, and it asks for an image resource, nested port blocks, and a socket. That is the right tool for a cluster. It is a long file for nginx on port 8080.
+OrbStack was the place that needed that first. The builds on this Mac were a Linux machine with real CPU, memory, and disk, and the containers beside it. Those lived as `orbctl` and `docker` commands. I wanted them in the same `.tf` files as the rest of the lab.
 
-I did not want a second Docker provider. I wanted one resource that pulls the image, and a machine resource that can set the limits `orbctl` already accepts.
+[Robert de Bock's provider](https://github.com/robertdebock/terraform-provider-orbstack) was the published OrbStack provider. It creates a machine and reads `orb info`. CPU, memory, disk, isolation, mounts, and containers sit outside that surface. That was too small for the builds I wanted to record.
+
+I started over. A new provider, with machines that take the limits `orbctl` already accepts, and one container resource on the OrbStack Docker socket so a web process is a block in the same file as the machine. The general Docker provider can do the container half, and it asks for an image resource, nested port blocks, and a socket. The file I wanted is the short one above.
 
 ## Tech Stack
 
