@@ -16,6 +16,7 @@ Selected systems I design and ship outside work: self-service data platforms, ag
 ## Also
 
 - [[projects/skipper | Skipper]] — fuzzy-search SSH hosts from `~/.ssh/config` (Go)
+- [[projects/orbstack | OrbStack Provider]] — Terraform for OrbStack machines and containers. **Go · Terraform**
 - [[projects/airgeadas | Airgeadas]] — Irish take-home → household month plan in the browser (Angular, TypeScript)
 - [[projects/tfvc | TFVC]] — Team Foundation Version Control in Cursor / VS Code
 - [[projects/tfai | tfai]] — SwiftUI Luas companion with NFC Leap Card

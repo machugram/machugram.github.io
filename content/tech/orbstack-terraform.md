@@ -16,7 +16,7 @@ I wanted Terraform to make a Linux machine and a container on the Mac I already 
 
 The community OrbStack provider creates a machine and reads `orb info`. CPU, memory, disk, isolation, and mounts stay on the CLI. The Docker provider can run the container, and it expects an image resource, nested port blocks, and a socket you configure. That shape fits a cluster. It is a long file for nginx on port 8080.
 
-[machugram/orbstack](https://registry.terraform.io/providers/machugram/orbstack/latest) is the provider I wrote for the laptop case. Source is [github.com/machugram/terraform-provider-orbstack](https://github.com/machugram/terraform-provider-orbstack). `0.1.2` is the published version.
+[machugram/orbstack](https://registry.terraform.io/providers/machugram/orbstack/latest) is the provider I wrote for the laptop case. The project page is [[projects/orbstack | OrbStack Provider]]. Source is [github.com/machugram/terraform-provider-orbstack](https://github.com/machugram/terraform-provider-orbstack). `0.1.2` is the published version.
 
 ## Two clients, one schema
 
