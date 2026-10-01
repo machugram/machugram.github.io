@@ -3,9 +3,7 @@ title: Two Control Planes on One Mac
 summary: "A homelab needs a trail of its setups. Terraform is that trail, and OrbStack was the first place I needed a provider for it."
 date: 2026-10-01
 tags:
-  - homelab
-  - go
-  - infrastructure
+  - sre
 draft: false
 aliases:
   - ../posts/tech/orbstack-terraform

@@ -6,7 +6,7 @@ date:  2026-10-01
 github: https://github.com/machugram/terraform-provider-orbstack
 ---
 
-**OrbStack Provider** is a Terraform provider I wrote from scratch so a homelab has a trail. The first setups that needed it were on [OrbStack](https://orbstack.dev): Linux machines through `orbctl`, and containers through the Docker engine it already runs. Published as [`machugram/orbstack`](https://registry.terraform.io/providers/machugram/orbstack/latest) `0.1.2`.
+**OrbStack Provider** is a Terraform provider I wrote from scratch so a homelab has a trail. The first setups that needed it were on [OrbStack](https://orbstack.dev): Linux machines through `orbctl`, and containers through the Docker engine it already runs. Published as [`machugram/orbstack`](https://registry.terraform.io/providers/machugram/orbstack/latest).
 
 ```hcl
 resource "orbstack_machine" "dev" {

@@ -6,7 +6,7 @@ date:  2026-09-03
 github: https://github.com/machugram/airgeadas
 ---
 
-**Airgeadas** is a household finance planner that lives in the browser. The app is called Clearplan. Money in, money out, leftover in a typical month. No account, no API, no Google Fonts. A job offer becomes net pay; net pay becomes a line on the same plan as rent and groceries.
+**Airgeadas**  - Irish word for finance - is a household finance planner that lives in the browser. The app is called Clearplan. Money in, money out, leftover in a typical month. No account, no API, no Google Fonts. A job offer becomes net pay; net pay becomes a line on the same plan as rent and groceries.
 
 The unit is a typical month, not a job title.
 
