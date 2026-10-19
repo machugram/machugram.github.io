@@ -26,7 +26,8 @@ aliases:
  - Crime 101 (2026)
  - Project Hail Mary (2026)
  - Jerry Maguire(1996)
- 
+ - Carrie (2026)
+ - The Messenger: Joan of Arc (1999)
 
  
  
