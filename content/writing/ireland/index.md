@@ -10,3 +10,5 @@ aliases:
 ---
  
 Living In Ireland. The Docklands experience and the culture.
+
+- I tried to understand living in Dublin. I moved to the city centre (Docklands) to cause chance.
