@@ -10,7 +10,6 @@ tags:
 
 Notes on the tools I keep choosing. Rewritten when the opinion changes.
 
-- [[tech/stack/csharp | C#]] — contracts, async, LINQ, .NET runtimes
 - [[tech/stack/linux | Linux]] — processes, host tools (`ls`, `du`, …)
 - [[tech/stack/windows | Windows]] — processes, services, ETW, IIS
 - [[tech/stack/infra | Infra]] — runtimes, networking protocols & tools

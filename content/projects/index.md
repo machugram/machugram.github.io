@@ -1,14 +1,13 @@
 ---
 title: Projects
-summary: "Rexford Machu — featured platform, product, and finance tooling: Datagraft, Orbit, Mini DBaaS, Wander. Go, Python, C#, Swift, Postgres, Docker."
+summary: "Featured platform, product, and finance tooling"
 draft: false
 ---
 
 Selected systems I design and ship outside work: self-service data platforms, agent infrastructure, developer tools, and product apps.
 
 ## Featured
-
-- [[projects/datagraft | Datagraft]] — `git checkout` for live Postgres: isolated fork, optional row sample. **Go · PostgreSQL**
+- [[projects/orbstack | OrbStack Provider]] — Terraform trail for homelab setups, starting with OrbStack. **Go · Terraform**
 - [[projects/orbit-mcp | Orbit]] — disposable Linux VMs for AI agents (MCP), SSH keys, secret vault. **Go · MCP · Linux**
 - [[projects/mdbaas | Mini DBaaS]] — on-demand Postgres with quotas, credentials, lifecycle. **Python · FastAPI · Docker**
 - [[projects/wander | Wander]] — iOS travel companion: itineraries, places, map orientation. **Swift · UIKit · CoreLocation**
@@ -16,7 +15,6 @@ Selected systems I design and ship outside work: self-service data platforms, ag
 ## Also
 
 - [[projects/skipper | Skipper]] — fuzzy-search SSH hosts from `~/.ssh/config` (Go)
-- [[projects/orbstack | OrbStack Provider]] — Terraform trail for homelab setups, starting with OrbStack. **Go · Terraform**
 - [[projects/airgeadas | Airgeadas]] — Irish take-home → household month plan in the browser (Angular, TypeScript)
 - [[projects/tfvc | TFVC]] — Team Foundation Version Control in Cursor / VS Code
 - [[projects/tfai | tfai]] — SwiftUI Luas companion with NFC Leap Card
