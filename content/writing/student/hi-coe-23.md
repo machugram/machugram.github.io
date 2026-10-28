@@ -3,11 +3,10 @@ title: Say Hi -  COE'23
 draft: false
 summary: "A hello to COE '23."
 date: 2023-03-01 
-tags:
-  - personal
-  - writings
 aliases:
   - ../../posts/student/hi-coe-23
+tags:
+  - student
 ---
 
 I am going to try and say hi to all my class mates.

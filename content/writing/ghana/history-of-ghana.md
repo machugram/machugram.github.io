@@ -3,9 +3,10 @@ title: History of Ghana
 draft: true
 date: 2026-06-01 
 summary:
-tags:
 aliases:
   - ../../posts/ghana/history-of-ghana
+tags:
+  - ghana
 ---
 
 

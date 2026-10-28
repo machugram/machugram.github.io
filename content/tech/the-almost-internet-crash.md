@@ -2,14 +2,12 @@
 title: The Day the Internet Almost Died (And Nobody Knew)
 summary: "The XZ Utils backdoor, caught by a 500-millisecond SSH delay nobody else treated as a clue."
 date: 2026-03-12
-tags:
-  - tech-history
-  - security
-  - open-source
-  - linux
 draft: false
 aliases:
   - ../posts/tech/the-almost-internet-crash
+tags:
+  - history
+  - security
 ---
 
 There's a developer somewhere—let's call him Andres—sitting at his desk in late March 2024, debugging SSH connections on a beta Linux system. Something's wrong. The login is slow. Just half a second too slow.

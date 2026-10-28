@@ -1,9 +1,6 @@
 ---
 title: playing landlord
 draft: true
-tags:
-  - personal
-  - writings
 aliases:
   - ../posts/landlord
 ---

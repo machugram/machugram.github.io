@@ -2,9 +2,6 @@
 title: Beneficent Dictator's Manifesto
 draft: true
 summary: my future state vision for certain countries
-tags:
-  - personal
-  - writings
 aliases:
   - ../../posts/global/future-state
 ---

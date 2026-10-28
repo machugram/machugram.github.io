@@ -2,11 +2,11 @@
 title: Two Control Planes on One Mac
 summary: "A homelab needs a trail of its setups. Terraform is that trail, and OrbStack was the first place I needed a provider for it."
 date: 2026-10-01
-tags:
-  - sre
 draft: false
 aliases:
   - ../posts/tech/orbstack-terraform
+tags:
+  - sre
 ---
 
 Thinking about a homelab, I realized I needed a trail of the setups. A machine from last month should be a file I can read, plan, and apply again. Terraform is that trail. The first gap was OrbStack: the Linux machines and containers on this Mac were still CLI commands, and they needed to live in the same `.tf` files as the rest of the lab.

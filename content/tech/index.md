@@ -5,8 +5,6 @@ draft: false
 aliases:
   - ../posts/tech
   - ../posts/tech/index
-tags:
-  - engineering
 ---
 
 Engineering notes on programming, platforms, security, networking, and how the tools got here.
