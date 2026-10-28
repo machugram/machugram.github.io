@@ -319,9 +319,40 @@ function renderGlobalGraph() {
   registerEscapeHandler(container, hideGlobalGraph)
 }
 
+function waitForGraphLayout(containerId: string): Promise<HTMLElement | null> {
+  return new Promise((resolve) => {
+    const tryFind = () => document.getElementById(containerId)
+
+    let el = tryFind()
+    if (el && el.offsetWidth > 0 && el.offsetHeight > 0) {
+      resolve(el)
+      return
+    }
+
+    let frames = 0
+    const tick = () => {
+      el = tryFind()
+      frames++
+      if (el && el.offsetWidth > 0 && el.offsetHeight > 0) {
+        resolve(el)
+        return
+      }
+      if (frames < 30) {
+        requestAnimationFrame(tick)
+        return
+      }
+      resolve(el)
+    }
+    requestAnimationFrame(tick)
+  })
+}
+
 document.addEventListener("nav", async (e: unknown) => {
   const slug = (e as CustomEventMap["nav"]).detail.url
   addToVisited(slug)
+
+  // SPA morph can insert the graph before layout has width/height; wait so D3 doesn't paint into a 0×0 box.
+  await waitForGraphLayout("graph-container")
   await renderGraph("graph-container", slug)
 
   const containerIcon = document.getElementById("global-graph-icon")

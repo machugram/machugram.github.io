@@ -1,8 +1,12 @@
 ---
 title: Alexa Luas — Voice Departures for Dublin Trams
+displayTitle: Alexa Luas
 summary: An Alexa skill for live Dublin Luas times. It does not invent departures.
 draft: false
 date:  2026-08-31
+stack: [Node.js, AWS Lambda, Alexa]
+featured: false
+order: 10
 ---
 
 **Alexa Luas** is a custom Alexa skill that answers Dublin Luas questions by voice. Ask for the next tram from Ranelagh, plan a Red ↔ Green journey, or say "what's my tram" after saving a home stop. The backend is Node.js on AWS Lambda (ASK SDK), live times come from the official Luas forecast XML API, and DynamoDB holds a short-TTL cache plus user preferences. The rule the skill is built around: never invent a departure time.

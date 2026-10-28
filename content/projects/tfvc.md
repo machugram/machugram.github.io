@@ -1,9 +1,16 @@
 ---
 title: TFVC — Source Control for Cursor and VS Code
+displayTitle: TFVC
 summary: Team Foundation Version Control in the Cursor and VS Code Source Control view.
 draft: false
 date:  2026-09-03
 github: https://github.com/machugram/tf-extension
+cover: https://raw.githubusercontent.com/machugram/tf-extension/main/docs/screenshots/scm.png
+live: https://github.com/machugram/tf-extension/releases
+liveLabel: releases
+stack: [TypeScript, VS Code]
+featured: false
+order: 8
 ---
 
 **TFVC** is a Cursor and VS Code extension that puts Team Foundation Version Control back in the Source Control view. Microsoft’s Azure Repos extension no longer ships TFVC. This one talks to Visual Studio’s `tf.exe` or the Team Explorer Everywhere CLI and wraps the commands you already run in a terminal inside the editor you already use.

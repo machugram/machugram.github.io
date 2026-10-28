@@ -18,8 +18,8 @@ export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ArticleTitle(),
     Component.ContentMeta(),
-    Component.TagList(),
     Component.ProjectLink(),
+    Component.Graph(),
   ],
   left: [
     Component.Navbar(),
@@ -27,9 +27,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Darkmode(),
     Component.Search(),
   ],
-  right: [
-    Component.Graph(),
-  ],
+  right: [],
 }
 
 // components for pages that display lists of pages (e.g. tags or folders)

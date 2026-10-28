@@ -1,9 +1,15 @@
 ---
 title: Orbit — Agentic VM Orchestration
+displayTitle: Orbit
 summary: "An MCP server that gives agents disposable Linux VMs, with SSH keys and a secret vault."
 draft: false
 date:  2026-06-19
 github: https://github.com/machugram/orbit
+live: https://github.com/machugram/orbit/releases
+liveLabel: releases
+stack: [Go, MCP, Linux]
+featured: true
+order: 2
 ---
 
 **Orbit** is an MCP server written in Go that gives AI agents their own disposable, isolated Linux environments to work in. Each session spins up a fresh VM complete with per-session SSH keys, encrypted secret vaults, and full lifecycle automation — so agents can build, run, and tear down real infrastructure without ever touching the host. Orbit makes it easier for developers to hand agents genuine compute while keeping every workload sandboxed, reproducible, and secure.

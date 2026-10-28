@@ -1,8 +1,12 @@
 ---
 title: Luas — Digital Leap Pass
+displayTitle: Luas
 summary: "Architecture for moving Ireland's Leap Card onto a phone."
 draft: false
 date:  2026-03-17
+stack: [Architecture, NFC, Wallet]
+featured: false
+order: 11
 ---
 
 **Luas** is the plan and architecture for moving Ireland's physical Leap Card onto a phone — a digital transit pass that works on both iPhone and Android. The plastic card is a closed MIFARE DESFire silo: validators can debit it, riders cannot see it, and no companion app can honestly read balance or journey history. A Wallet-resident pass changes that. Every tap becomes an account event. That is the data plane a next-generation rider expects, and the only feed that lets an AI companion answer "am I ready to travel?" without guessing.

@@ -1,9 +1,14 @@
 ---
 title: Airgeadas — Household Finance Planner
+displayTitle: Airgeadas
 summary: "A browser household planner: Irish take-home next to rent, bills, and leftover pots."
 draft: false
 date:  2026-09-03
 github: https://github.com/machugram/airgeadas
+cover: https://raw.githubusercontent.com/machugram/airgeadas/main/docs/overview.png
+stack: [Angular, TypeScript]
+featured: false
+order: 7
 ---
 
 **Airgeadas**  - Irish word for finance - is a household finance planner that lives in the browser. The app is called Clearplan. Money in, money out, leftover in a typical month. No account, no API, no Google Fonts. A job offer becomes net pay; net pay becomes a line on the same plan as rent and groceries.

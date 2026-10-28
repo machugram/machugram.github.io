@@ -3,6 +3,7 @@ import path from "path"
 
 import style from "../styles/listPage.scss"
 import { PageList } from "../PageList"
+import { ProjectList } from "../ProjectList"
 import { _stripSlashes, simplifySlug } from "../../util/path"
 import { Root } from "hast"
 import { pluralize } from "../../util/lang"
@@ -30,15 +31,16 @@ function FolderContent(props: QuartzComponentProps) {
       ? fileData.description
       : htmlToJsx(fileData.filePath!, tree)
 
-  // Projects index is a curated showcase; skip the duplicate auto listing.
-  const skipAutoList = folderSlug === "projects"
+  const isProjects = folderSlug === "projects"
 
   return (
     <div class="popover-hint">
       <article>
         <p>{content}</p>
       </article>
-      {!skipAutoList && (
+      {isProjects ? (
+        <ProjectList {...listProps} />
+      ) : (
         <>
           <p>{pluralize(allPagesInFolder.length, "item")} under this folder.</p>
           <div>
@@ -50,5 +52,5 @@ function FolderContent(props: QuartzComponentProps) {
   )
 }
 
-FolderContent.css = style + PageList.css
+FolderContent.css = style + PageList.css + ProjectList.css
 export default (() => FolderContent) satisfies QuartzComponentConstructor

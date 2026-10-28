@@ -47,14 +47,14 @@ footer {
 }
 
 .footer-links li a {
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 400;
   color: var(--gray) !important;
   text-decoration: none !important;
   background-color: transparent !important;
-  transition: color 0.2s ease;
+  transition: color 0.15s ease;
 }
 
 .footer-links li a:hover {

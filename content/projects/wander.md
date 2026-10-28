@@ -1,8 +1,12 @@
 ---
 title: Wander — iOS Travel Companion
+displayTitle: Wander
 summary: "An iOS travel companion for itineraries, places, and staying oriented on the ground."
 draft: false
 date:  2025-11-15
+stack: [Swift, UIKit, CoreLocation]
+featured: true
+order: 4
 ---
 
 **Wander** is a native iOS travel companion: plan the trip, then keep itinerary, saved places, and map orientation usable once you are on the ground — without bouncing between notes, Maps, and a spreadsheet.

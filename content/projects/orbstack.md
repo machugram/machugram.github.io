@@ -1,9 +1,15 @@
 ---
 title: OrbStack Provider — Terraform for the Mac
+displayTitle: OrbStack Provider
 summary: "A from-scratch Terraform provider so homelab setups, starting with OrbStack, have a trail in .tf files."
 draft: false
 date:  2026-10-01
 github: https://github.com/machugram/terraform-provider-orbstack
+live: https://registry.terraform.io/providers/machugram/orbstack/latest
+liveLabel: registry
+stack: [Go, Terraform]
+featured: true
+order: 1
 ---
 
 **OrbStack Provider** is a Terraform provider I wrote from scratch so a homelab has a trail. The first setups that needed it were on [OrbStack](https://orbstack.dev): Linux machines through `orbctl`, and containers through the Docker engine it already runs. Published as [`machugram/orbstack`](https://registry.terraform.io/providers/machugram/orbstack/latest).

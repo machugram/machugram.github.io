@@ -1,9 +1,15 @@
 ---
 title: Mini DBaaS — Self-Service Postgres on Demand
+displayTitle: Mini DBaaS
 summary: "Self-service Postgres on demand: isolated containers, quotas, and credential rotation."
 draft: false
 date:  2026-07-05
 github: https://github.com/machugram/minidbaas
+live: https://github.com/machugram/minidbaas/releases
+liveLabel: releases
+stack: [Python, FastAPI, Docker, Postgres]
+featured: true
+order: 3
 ---
 
 **Mini DBaas** is a self-service platform that provisions and manages Postgres instances on demand. Teams can spin up isolated databases without waiting for infrastructure — each instance gets its own container, managed roles, encrypted credentials, and automatic backups. The control plane is a FastAPI service that enforces quotas, handles credential rotation, patches instances, and cleans up expired databases automatically. It eliminates the toil of manual Postgres provisioning while keeping each tenant's data strictly isolated.
