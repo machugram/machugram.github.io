@@ -10,7 +10,7 @@ Software Engineer, SRE — reliability & observability for regulated markets, pl
 
 Software Engineer, SRE · Dublin · Present
 
-Reliability and platform work for **short selling regulatory reporting** across jurisdictions. Equity Position and Monitoring (EPMD) flows that keep global short-sale disclosure accurate, auditable, and on time.
+Reliability and platform engineering for **short selling regulatory reporting** across jurisdictions. Equity Position and Monitoring (EPMD) flows that keep global short-sale disclosure accurate, auditable, and on time.
 
 Services that must be correct under deadline, observable when they drift, and boring when they are healthy.
 
