@@ -2,14 +2,12 @@
 title: When Software Starts Driving Itself (Part 1)
 summary: "AI-assisted development is turning into a fleet problem. Platforms have to become traffic control."
 date: 2026-08-11
-tags:
-  - ai
-  - platform
-  - engineering
-  - reliability
 draft: false
 aliases:
   - ../posts/tech/code-highway
+tags:
+  - platform
+  - sre
 ---
 
 *Part 1 of 2 — [Part 2: Preparing for the Autonomous Fleet](./code-highway-part-2)*

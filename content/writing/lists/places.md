@@ -3,11 +3,10 @@ title: Places
 draft: false
 date: 2023-03-01 
 summary: Cities and towns that stuck.
-tags:
-  - personal
-  - writings
 aliases:
   - ../../posts/lists/places
+tags:
+  - lists
 ---
 
 - [Accra](https://en.wikipedia.org/wiki/Accra) - The capital city of Ghana, known for its vibrant culture and history.

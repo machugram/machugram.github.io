@@ -5,7 +5,6 @@ date: 2026-09-21
 draft: false
 tags:
   - stack
-  - infrastructure
 ---
 
 Notes on the tools I keep choosing. Rewritten when the opinion changes.

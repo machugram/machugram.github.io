@@ -3,12 +3,10 @@ title: OSOC - Ghana's Semiconductor Ambitions from my perspective.
 draft: false
 date: 2026-03-01 
 summary: "Ghana should not build fabs. OSAT, talent, and regional positioning are the realistic path."
-tags:
-  - ghana
-  - semiconductors
-  - tech
 aliases:
   - ../../posts/ghana/semiconductor
+tags:
+  - ghana
 ---
 
 *Reference: [Academic paper on Ghana's semiconductor potential](https://jesr.ub.ro/journal/article/view/232/218)*

@@ -4,7 +4,6 @@ displayTitle: "AWS Cloud Practitioner — SSA"
 draft: false
 summary: "How I prepared for the AWS Cloud Practitioner exam during the Sub-Saharan Africa Challenge."
 date: 2021-11-05
-tags:
 aliases:
   - ../posts/aws-cloud-practitioner-exams-sub-saharan-africa-challenge
 ---

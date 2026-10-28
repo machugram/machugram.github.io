@@ -3,11 +3,10 @@ title: Reading List
 draft: false
 date: 2026-06-01
 summary: "Books, articles, and papers I have read or mean to."
-tags:
-  - personal
-  - writings
 aliases:
   - ../../posts/lists/reading-list
+tags:
+  - lists
 ---
 
 

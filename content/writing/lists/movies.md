@@ -3,11 +3,10 @@ title: Movies
 draft: false
 date: 2023-03-01 
 summary: Films I keep coming back to.
-tags:
-  - personal
-  - writings
 aliases:
   - ../../posts/lists/movies
+tags:
+  - lists
 ---
  
  - The Mist(2007)
