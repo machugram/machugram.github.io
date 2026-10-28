@@ -17,13 +17,9 @@ order: 5
 
 Sketch the system on your iPad before you write the RFC.
 
-![Library of diagrams](../assets/images/projects/diagrampad/home.png)
+
 
 ## Screenshots
-
-A starter web architecture:
-
-![Checkout service architecture](../assets/images/projects/diagrampad/canvas-architecture.png)
 
 A starter CI/CD pipeline:
 
