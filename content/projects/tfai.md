@@ -1,9 +1,13 @@
 ---
 title: tfai — Dublin Luas Companion
+displayTitle: tfai
 summary: "A SwiftUI Luas companion: NFC Leap Card, journey log, map, and should-I-leave-now."
 draft: false
 date:  2026-07-27
 github: https://github.com/machugram/tfai
+stack: [Swift, SwiftUI, NFC]
+featured: false
+order: 9
 ---
 
 **tfai** is a SwiftUI iOS companion for Dublin Luas riders. Scan a Leap Card over NFC, keep a journey log, and turn real riding into travel-readiness cues and recap-style insights — alongside a tram map, journey planner, and stop-level browsing for the Red and Green lines. It is the everyday answer to two questions: should I leave now, and what does my travel actually look like?

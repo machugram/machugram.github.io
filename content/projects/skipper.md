@@ -1,9 +1,15 @@
 ---
 title: Skipper — Interactive SSH Host Picker
+displayTitle: Skipper
 summary: "Fuzzy-search your SSH config and connect without memorizing host aliases."
 draft: false
 date:  2026-04-03
 github: https://github.com/machugram/skipper
+live: https://github.com/machugram/skipper/releases
+liveLabel: releases
+stack: [Go, Bubbletea]
+featured: false
+order: 6
 ---
 
 **Skipper** is a CLI tool that transforms SSH connection management into a fast, interactive experience. Read your `~/.ssh/config` once, then browse, search, and connect to any host without memorizing aliases — fuzzy-search narrows down the list in real time, and one keystroke drops you into a session. Skipper eliminates SSH friction: no more digging through notes or config files, no more typos in rarely-used host aliases. It makes remote access as natural as browsing a file picker.

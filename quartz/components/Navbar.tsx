@@ -12,14 +12,20 @@ function Navbar({ fileData, cfg, displayClass }: QuartzComponentProps) {
         </a>
       </div>
       <div class="navbar-links">
-        <a href={joinSegments(baseDir, "tech")} class="nav-link">
-          TECH
+        <a href={joinSegments(baseDir, "work")} class="nav-link">
+          work
         </a>
-        <a href={joinSegments(baseDir, "writing")} class="nav-link">
-          WRITING
+        <a href={joinSegments(baseDir, "projects") + "/"} class="nav-link">
+          projects
         </a>
-        <a href={joinSegments(baseDir, "projects")} class="nav-link">
-          PROJECTS
+        <a href={joinSegments(baseDir, "tech") + "/"} class="nav-link">
+          tech
+        </a>
+        <a href={joinSegments(baseDir, "writing") + "/"} class="nav-link">
+          writing
+        </a>
+        <a href={joinSegments(baseDir, "graph")} class="nav-link">
+          graph
         </a>
       </div>
     </nav>
@@ -30,17 +36,17 @@ Navbar.css = `
 .navbar {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.75rem;
 }
 
 .navbar-name {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--dark) !important;
   text-decoration: none !important;
   background-color: transparent !important;
-  letter-spacing: 0.01em;
-  transition: color 0.2s ease;
+  letter-spacing: -0.01em;
+  transition: color 0.15s ease;
 }
 
 .navbar-name:hover {
@@ -50,18 +56,18 @@ Navbar.css = `
 .navbar-links {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 0.55rem;
 }
 
 .nav-link {
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  letter-spacing: 0;
   color: var(--gray) !important;
-  text-transform: uppercase;
-  font-weight: 500;
+  text-transform: none;
+  font-weight: 400;
   text-decoration: none !important;
   background-color: transparent !important;
-  transition: color 0.2s ease;
+  transition: color 0.15s ease;
 }
 
 .nav-link:hover {

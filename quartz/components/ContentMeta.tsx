@@ -2,14 +2,15 @@ import { formatDate, getDate } from "./Date"
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import readingTime from "reading-time"
 
-function isFolderOrHome(slug?: string) {
+function hideContentMeta(slug?: string) {
   if (!slug) return false
-  return slug === "index" || slug.endsWith("/index")
+  // No date/reading time on landing, folder indexes, or CV-style pages.
+  return slug === "index" || slug === "work" || slug === "graph" || slug.endsWith("/index")
 }
 
 export default (() => {
   function ContentMetadata({ cfg, fileData, displayClass }: QuartzComponentProps) {
-    if (isFolderOrHome(fileData.slug)) {
+    if (hideContentMeta(fileData.slug)) {
       return null
     }
 

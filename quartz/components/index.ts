@@ -21,6 +21,7 @@ import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import Navbar from "./Navbar"
 import ProjectLink from "./ProjectLink"
+import ProjectList from "./ProjectList"
 
 export {
   ArticleTitle,
@@ -46,4 +47,5 @@ export {
   Breadcrumbs,
   Navbar,
   ProjectLink,
+  ProjectList,
 }

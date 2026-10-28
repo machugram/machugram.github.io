@@ -1,17 +1,17 @@
 ---
 title: rex.
-summary: "Rexford Machu — Software Engineer at Bank of America, Dublin. Product, platform, and SRE-shaped systems for regulated markets and short-sale disclosure. Open to product, platform, SRE, and finance engineering roles."
+summary: "Rexford Machu — Software Engineer, SRE at Bank of America, Dublin. Reliability for regulated markets and short-sale disclosure. Open to Software Engineer, SRE, and finance engineering roles."
 draft: false
 ---
 
-**Rexford Machu** — software engineer at [Bank of America](https://www.bankofamerica.com) in Dublin.
+Software Engineer, SRE · [Bank of America](https://www.bankofamerica.com) · Dublin
 
-Product and platform engineering for **short selling regulatory reporting** across jurisdictions: Equity Position and Monitoring (EPMD) flows that keep global short-sale disclosure accurate, auditable, and on time.
+Short-sale disclosure / reliability
 
-**Stack** — Go · Python · TypeScript · C# · Swift · Kubernetes · Kafka · PostgreSQL · AWS · Terraform · Docker
+Go · Python · TypeScript · C# · Swift · Kubernetes · Kafka · PostgreSQL · AWS · Terraform · Docker
 
-**Builds** — [[projects/datagraft | Datagraft]] (Postgres branching) · [[projects/orbit-mcp | Orbit]] (agent VMs) · [[projects/mdbaas | Mini DBaaS]] (self-service Postgres) · [[projects/wander | Wander]] (iOS travel) · [[projects | all projects]]
+[[work | Work]] · [[projects/datagraft | Datagraft]] · [[projects/orbit-mcp | Orbit]] · [[projects/mdbaas | Mini DBaaS]] · [[projects/ | projects]]
 
-**Open to** — Software Engineer, Platform Engineer, SRE, Product Engineer, or finance / fintech roles in markets, financial systems, regulated platforms, or reliability.
+Open to Software Engineer, SRE, or finance engineering
 
-[GitHub](https://github.com/machugram) · [LinkedIn](https://www.linkedin.com/in/rexfordmachu) · [Cursor](https://cursor.com/@findrex) · [[tech | Tech]] · [[tech/stack | Stack notes]]
+[GitHub](https://github.com/machugram) · [LinkedIn](https://www.linkedin.com/in/rexfordmachu) · [Cursor](https://cursor.com/@findrex)

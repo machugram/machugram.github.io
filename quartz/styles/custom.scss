@@ -1,9 +1,7 @@
 @use "./base.scss";
 
 body {
-  background:
-    radial-gradient(1100px 420px at 100% -120px, color-mix(in srgb, var(--highlight) 45%, transparent), transparent 65%),
-    var(--light);
+  background: var(--light);
 }
 
 // ─────────────────────────────────────────────
@@ -12,63 +10,63 @@ body {
 
 article {
   h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    font-weight: 650;
+    line-height: 1.25;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
     color: var(--dark);
     font-family: var(--headerFont);
   }
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    line-height: 1.3;
-    margin-top: 2.5rem;
+    line-height: 1.35;
+    margin-top: 2.25rem;
     margin-bottom: 0.5rem;
     color: var(--dark);
     font-family: var(--headerFont);
   }
 
   h3 {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 600;
     line-height: 1.4;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.4rem;
     color: var(--dark);
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     color: var(--darkgray);
   }
 
   p {
-    margin-bottom: 1.35rem;
-    line-height: 1.72;
-    font-size: 1.05rem;
+    margin-bottom: 1.15rem;
+    line-height: 1.7;
+    font-size: 1rem;
   }
 
   ul,
   ol {
-    margin-bottom: 1.25rem;
-    padding-left: 1.5rem;
+    margin-bottom: 1.15rem;
+    padding-left: 1.35rem;
 
     li {
-      margin-bottom: 0.4rem;
-      line-height: 1.7;
+      margin-bottom: 0.35rem;
+      line-height: 1.65;
     }
   }
 
   blockquote {
-    border-left: 2px solid var(--darkgray);
-    padding: 0.1rem 1.5rem;
-    margin: 1.75rem 0;
+    border-left: 2px solid var(--lightgray);
+    padding: 0.1rem 1.25rem;
+    margin: 1.5rem 0;
     font-style: italic;
     color: var(--gray);
     background: transparent;
@@ -76,9 +74,9 @@ article {
   }
 
   pre {
-    border-radius: 6px;
-    padding: 1.25rem !important;
-    margin: 1.5rem 0;
+    border-radius: 4px;
+    padding: 1.1rem !important;
+    margin: 1.35rem 0;
     border: 1px solid var(--lightgray);
     overflow-x: auto;
 
@@ -89,9 +87,9 @@ article {
   }
 
   :not(pre) > code {
-    background: var(--highlight);
-    padding: 0.15rem 0.4rem;
-    border-radius: 4px;
+    background: color-mix(in srgb, var(--highlight) 55%, transparent);
+    padding: 0.12rem 0.35rem;
+    border-radius: 3px;
     font-size: 0.88em;
     color: var(--darkgray);
     font-weight: 500;
@@ -103,8 +101,8 @@ article {
     margin: 1.5rem 0;
 
     th {
-      background: var(--highlight);
-      padding: 0.65rem 0.75rem;
+      background: transparent;
+      padding: 0.55rem 0.65rem;
       text-align: left;
       font-weight: 600;
       border-bottom: 1px solid var(--lightgray);
@@ -112,7 +110,7 @@ article {
     }
 
     td {
-      padding: 0.65rem 0.75rem;
+      padding: 0.55rem 0.65rem;
       border-bottom: 1px solid var(--lightgray);
     }
 
@@ -122,16 +120,16 @@ article {
   }
 
   img {
-    border-radius: 6px;
+    border-radius: 4px;
     max-width: 100%;
     height: auto;
-    margin: 1.5rem 0;
+    margin: 1.35rem 0;
   }
 
   hr {
     border: none;
     border-top: 1px solid var(--lightgray);
-    margin: 2.5rem 0;
+    margin: 2.25rem 0;
   }
 }
 
@@ -140,10 +138,10 @@ article {
 // ─────────────────────────────────────────────
 
 .content-meta {
-  margin: 0.35rem 0 1.75rem 0;
+  margin: 0.25rem 0 0.5rem 0;
   color: var(--gray);
   font-size: 0.8rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0;
 }
 
 // ─────────────────────────────────────────────
@@ -154,10 +152,10 @@ article {
   margin-bottom: 0;
 
   h1 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: -0.015em;
-    line-height: 1.2;
+    font-size: 1.85rem;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
     margin: 0;
     font-family: var(--headerFont);
     color: var(--dark);
@@ -171,10 +169,10 @@ article {
 article a:not(.tag-link) {
   color: var(--darkgray);
   text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--highlight) 65%, var(--gray));
+  text-decoration-color: color-mix(in srgb, var(--gray) 40%, transparent);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+  transition: text-decoration-color 0.15s ease, color 0.15s ease;
   font-weight: 400;
 
   &:hover {
@@ -184,28 +182,28 @@ article a:not(.tag-link) {
 }
 
 // ─────────────────────────────────────────────
-// TAG LIST
+// TAG LIST — keep quiet if tags appear in content
 // ─────────────────────────────────────────────
 
 .tags {
   list-style: none;
   padding: 0;
-  margin: 0.45rem 0 1.35rem 0;
+  margin: 0.45rem 0 1.1rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 
   .tag-link {
-    font-size: 0.8125rem !important;
-    letter-spacing: 0.005em !important;
-    color: var(--tertiary) !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0 !important;
+    color: var(--gray) !important;
     text-decoration: none !important;
-    background: color-mix(in srgb, var(--tertiary) 12%, transparent) !important;
-    border: none !important;
+    background: transparent !important;
+    border: 1px solid var(--lightgray) !important;
     text-transform: none !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
     padding: 1px 7px !important;
-    border-radius: 4px !important;
+    border-radius: 3px !important;
     line-height: 1.45 !important;
 
     &::before {
@@ -214,7 +212,7 @@ article a:not(.tag-link) {
 
     &:hover {
       color: var(--dark) !important;
-      background: color-mix(in srgb, var(--tertiary) 20%, transparent) !important;
+      border-color: var(--gray) !important;
       transform: none !important;
     }
   }
@@ -231,17 +229,17 @@ ul.section-ul {
 }
 
 li.section-li {
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.75rem;
 
   & > .section {
     display: grid;
     grid-template-columns: 80px 1fr;
-    gap: 0 1.5rem;
+    gap: 0 1.25rem;
     align-items: baseline;
 
     @media all and (max-width: 600px) {
       grid-template-columns: 1fr;
-      gap: 0.25rem;
+      gap: 0.2rem;
     }
 
     & > .meta {
@@ -249,16 +247,16 @@ li.section-li {
       color: var(--gray);
       font-weight: 400;
       margin: 0;
-      padding-top: 0.35rem;
-      letter-spacing: 0.02em;
+      padding-top: 0.2rem;
+      letter-spacing: 0;
       white-space: nowrap;
     }
 
     & > .desc {
       h3 {
-        margin: 0 0 0.3rem 0;
+        margin: 0 0 0.25rem 0;
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: 550;
         line-height: 1.4;
         color: var(--dark);
 
@@ -266,8 +264,8 @@ li.section-li {
           color: var(--dark) !important;
           text-decoration: none !important;
           background-color: transparent !important;
-          font-weight: 500;
-          transition: color 0.2s ease;
+          font-weight: 550;
+          transition: color 0.15s ease;
 
           &:hover {
             color: var(--gray) !important;
@@ -277,13 +275,12 @@ li.section-li {
 
       .post-description {
         margin: 0;
-        font-size: 0.875rem;
+        font-size: 0.9rem;
         color: var(--gray);
         line-height: 1.5;
       }
     }
 
-    // hide the inline tags list on this view
     & > .tags {
       display: none;
     }
@@ -291,62 +288,41 @@ li.section-li {
 }
 
 // ─────────────────────────────────────────────
-// GRAPH VIEW (right panel)
-// ─────────────────────────────────────────────
-
-.graph > h3 {
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gray);
-  font-weight: 500;
-  margin: 0 0 0.5rem 0;
-  font-family: var(--bodyFont);
-}
-
-// ─────────────────────────────────────────────
-// TABLE OF CONTENTS
-// ─────────────────────────────────────────────
-
-.toc {
-  & > button {
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--gray);
-    font-weight: 500;
-  }
-
-  & ul li a {
-    font-size: 0.8rem;
-    color: var(--gray);
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: var(--dark);
-    }
-  }
-}
-
-// ─────────────────────────────────────────────
-// DARKMODE + SEARCH placement
+// SIDEBAR CHROME — quiet
 // ─────────────────────────────────────────────
 
 .sidebar.left {
   .darkmode {
     margin: 0;
+    opacity: 0.7;
   }
 
   .search {
     #search-icon {
       p {
-        font-size: 0.7rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        font-weight: 500;
+        font-size: 0.85rem;
+        letter-spacing: 0;
+        text-transform: none;
+        font-weight: 400;
         color: var(--gray);
       }
     }
+  }
+}
+
+// Hide empty right rail space
+.sidebar.right:empty {
+  display: none;
+}
+
+// Graph page — let the map use the content column
+body[data-slug="graph"] {
+  article {
+    max-width: none;
+  }
+
+  .content-meta {
+    margin-bottom: 0.75rem;
   }
 }
 
@@ -361,6 +337,30 @@ li.section-li {
   }
 }
 
+// Home: more air between short paragraphs
+body[data-slug="index"] {
+  article p {
+    margin-bottom: 1.35rem;
+    max-width: 36rem;
+  }
+}
+
+// ─────────────────────────────────────────────
+// FOOTER — quiet lowercase
+// ─────────────────────────────────────────────
+
+footer {
+  margin-top: 4.5rem !important;
+  border-top-color: transparent !important;
+}
+
+.footer-links li a {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+}
+
 // ─────────────────────────────────────────────
 // SELECTION
 // ─────────────────────────────────────────────
@@ -369,4 +369,3 @@ li.section-li {
   background: color-mix(in srgb, var(--highlight) 65%, transparent);
   color: var(--dark);
 }
-

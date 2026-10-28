@@ -1,9 +1,15 @@
 ---
 title: Datagraft — Git Checkout for Live Postgres
+displayTitle: Datagraft
 summary: "git checkout for a live Postgres: fork origin into an isolated server, optionally ~N rows."
 draft: false
 date:  2026-09-03
 github: https://github.com/machugram/datagraft
+live: https://github.com/machugram/datagraft/releases
+liveLabel: releases
+stack: [Go, PostgreSQL]
+featured: false
+order: 5
 ---
 
 **Datagraft** is `git checkout` for a live PostgreSQL: fork the database you already have into an isolated server, optionally take ~N rows instead of the whole thing, and leave origin up. It is not a new engine, not a cluster, and not merge. A branch is a second Postgres. Reset recreates it. There is no `datagraft merge`.

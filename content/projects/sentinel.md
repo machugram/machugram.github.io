@@ -1,9 +1,15 @@
 ---
 title: Sentinel — Job Orchestration
+displayTitle: Sentinel
 summary: "C# job orchestration in the Autosys shape: define, schedule, and watch work."
 draft: false
 date:  2026-03-26
 github: https://github.com/machugram/sentinel
+live: https://github.com/machugram/sentinel/releases
+liveLabel: releases
+stack: [C#, .NET]
+featured: false
+order: 12
 ---
 
 **Sentinel** is a C# / .NET job orchestration system inspired by Autosys: define jobs, schedule them, and monitor runs — without treating the batch calendar as cron plus tribal knowledge.
