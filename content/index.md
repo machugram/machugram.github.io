@@ -10,7 +10,7 @@ Short-sale disclosure / reliability
 
 Go · Python · TypeScript · C# · Swift · Kubernetes · Kafka · PostgreSQL · AWS · Terraform · Docker
 
-[[work | Work]] · [[projects/datagraft | Datagraft]] · [[projects/orbit-mcp | Orbit]] · [[projects/mdbaas | Mini DBaaS]] · [[projects/ | projects]]
+[[work | Work]] · [[projects/diagrampad | DiagramPad]] · [[projects/orbit-mcp | Orbit]] · [[projects/mdbaas | Mini DBaaS]] · [[projects/ | projects]]
 
 Open to Software Engineer, SRE, or finance engineering
 
