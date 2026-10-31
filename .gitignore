@@ -4,3 +4,7 @@ quartz/.quartz-cache
 **/.DS_Store
 .env
 .npm-cache
+
+# Resume PDF — not in git; deploy fetches via RESUME_PDF_URL secret
+content/RexfordMachu_SRE_SWE_ObservabilityEngineer.pdf
+content/*.resume.pdf

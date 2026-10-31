@@ -36,6 +36,22 @@ jobs:
       
       - name: Install Dependencies
         run: npm ci
+
+      # Resume PDF is gitignored (personal). Deploy pulls base64 from a secret
+      # gist raw URL (see scripts/sync-resume-pdf.sh). Local: keep PDF under content/.
+      - name: Fetch private resume PDF
+        env:
+          RESUME_PDF_URL: ${{ secrets.RESUME_PDF_URL }}
+        run: |
+          set -euo pipefail
+          dest="content/RexfordMachu_SRE_SWE_ObservabilityEngineer.pdf"
+          if [ -z "${RESUME_PDF_URL:-}" ]; then
+            echo "::error::RESUME_PDF_URL secret is not set. Run scripts/sync-resume-pdf.sh"
+            exit 1
+          fi
+          curl -fsSL "$RESUME_PDF_URL" | base64 --decode > "$dest"
+          file "$dest"
+          test -s "$dest"
       
       - name: Build Quartz
         run: npx quartz build
