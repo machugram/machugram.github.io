@@ -6,6 +6,7 @@ export default (() => {
   function Head({ cfg, fileData, externalResources }: QuartzComponentProps) {
     const title = fileData.frontmatter?.title ?? "Untitled"
     const description = fileData.description?.trim() ?? "No description provided"
+    const noindex = fileData.frontmatter?.noindex === true
     const { css, js } = externalResources
 
     const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
@@ -20,6 +21,13 @@ export default (() => {
         <title>{title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {noindex && (
+          <meta
+            name="robots"
+            content="noindex, nofollow, noarchive, nosnippet, noimageindex, noai, noimageai"
+          />
+        )}
+        {noindex && <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         {cfg.baseUrl && <meta property="og:image" content={ogImagePath} />}

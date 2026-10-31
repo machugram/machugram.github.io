@@ -96,6 +96,10 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
       const emitted: FilePath[] = []
       const linkIndex: ContentIndex = new Map()
       for (const [tree, file] of content) {
+        // Keep unlisted pages off sitemap, RSS, search, and graph.
+        if (file.data.frontmatter?.noindex === true) {
+          continue
+        }
         const slug = file.data.slug!
         const date = getDate(ctx.cfg.configuration, file.data) ?? new Date()
         if (opts?.includeEmptyFiles || (file.data.text && file.data.text !== "")) {

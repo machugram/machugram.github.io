@@ -1,0 +1,46 @@
+User-agent: *
+Disallow: /resume
+Disallow: /resume.html
+Disallow: /RexfordMachu_SRE_SWE_ObservabilityEngineer.pdf
+
+User-agent: GPTBot
+Disallow: /resume
+Disallow: /resume.html
+Disallow: /RexfordMachu_SRE_SWE_ObservabilityEngineer.pdf
+
+User-agent: ChatGPT-User
+Disallow: /resume
+Disallow: /resume.html
+Disallow: /RexfordMachu_SRE_SWE_ObservabilityEngineer.pdf
+
+User-agent: Google-Extended
+Disallow: /resume
+Disallow: /resume.html
+Disallow: /RexfordMachu_SRE_SWE_ObservabilityEngineer.pdf
+
+User-agent: ClaudeBot
+Disallow: /resume
+Disallow: /resume.html
+Disallow: /RexfordMachu_SRE_SWE_ObservabilityEngineer.pdf
+
+User-agent: anthropic-ai
+Disallow: /resume
+Disallow: /resume.html
+Disallow: /RexfordMachu_SRE_SWE_ObservabilityEngineer.pdf
+
+User-agent: Bytespider
+Disallow: /resume
+Disallow: /resume.html
+Disallow: /RexfordMachu_SRE_SWE_ObservabilityEngineer.pdf
+
+User-agent: CCBot
+Disallow: /resume
+Disallow: /resume.html
+Disallow: /RexfordMachu_SRE_SWE_ObservabilityEngineer.pdf
+
+User-agent: PerplexityBot
+Disallow: /resume
+Disallow: /resume.html
+Disallow: /RexfordMachu_SRE_SWE_ObservabilityEngineer.pdf
+
+Sitemap: https://machugram.github.io/sitemap.xml
