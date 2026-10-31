@@ -369,3 +369,20 @@ footer {
   background: color-mix(in srgb, var(--highlight) 65%, transparent);
   color: var(--dark);
 }
+
+// Resume page — tall, resizable PDF frame so the browser viewer can zoom
+body[data-slug="resume"] {
+  article iframe {
+    display: block;
+    width: 100%;
+    min-height: 80vh;
+    height: 85vh;
+    border: 1px solid var(--lightgray);
+    border-radius: 4px;
+    background: var(--light);
+    resize: both;
+    overflow: auto;
+    max-width: 100%;
+  }
+}
+
