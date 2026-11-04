@@ -1,3 +1,3 @@
-# Quartz v4
+# rex.
 
-next!
+Personal site — [machugram.github.io](https://machugram.github.io).
