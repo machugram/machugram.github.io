@@ -12,3 +12,4 @@ Rough notes. Links, half-formed takes, and stages of learning. Promote into [[te
 - [[canvas/ai | AI]] — models, inference, tooling
 - [[canvas/finance | Finance]] — markets, infra, regulated systems
 - [[canvas/quantization | Quantization]] — what I'm learning right now
+- [[canvas/treage | Treage]] — policy-gated shell triage, idempotent redaction, and fail-closed parsers

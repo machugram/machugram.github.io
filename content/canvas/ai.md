@@ -18,3 +18,4 @@ Scratchpad for everything AI. Drop links and unfinished thoughts here; tidy late
 
 ## Thoughts
 
+- **Prompts are not safety boundaries.** When building [[projects/treage | Treage]], the core rule was that the model never decides whether a shell command is safe — a deterministic parser (`treage/policy.py`) classifies every suggestion across a `read_only < unknown < potentially_mutating < destructive` lattice and fails closed. Full session notes in [[canvas/treage | Treage — Tonight's Canvas]].
