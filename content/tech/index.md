@@ -11,6 +11,6 @@ Engineering notes on programming, platforms, security, networking, and how the t
 
 - [[tech/stack | Stack]] — languages and infra I actually ship with
 - [[tech/lists | Lists]] — favourite talks, essays, and papers
-- [[tech/talks | Talks]] — talks I have given or plan to
+- [[tech/ai | AI]] — Canvas for AI - links and raw thoughts
 
 Essays, RFCs, and systems writeups are listed below.

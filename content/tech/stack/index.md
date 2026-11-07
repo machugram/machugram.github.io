@@ -1,6 +1,6 @@
 ---
 title: The stack
-summary: "Living stack notes — C#, Linux, Windows, and infra tools (runtimes, networking, observability)."
+summary: "Living stack notes — Linux, Windows, and infra tools (runtimes, networking, observability)."
 date: 2026-09-21
 draft: false
 tags:

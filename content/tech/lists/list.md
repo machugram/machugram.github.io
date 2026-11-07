@@ -7,7 +7,6 @@ aliases:
   - talks
   - tech/talks/list
 tags:
-  - ai
   - lists
 ---
 
