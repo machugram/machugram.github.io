@@ -2,10 +2,9 @@
 title: Talks
 draft: false
 date: 2026-06-01
-summary: "Talks and reading lists — favourites, my talks, and notes worth keeping."
+summary: "Talks I have given or plan to give."
 ---
 
-Talks, essays, and lists under tech.
+Talks under tech.
 
-- [[tech/talks/list | List]] — favourites worth keeping
 - [[tech/talks/my-talks | My talks]] — talks I have given or plan to

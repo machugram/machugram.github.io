@@ -5,8 +5,10 @@ date: 2026-09-21
 summary: "Favourite tech talks, essays, and papers worth keeping."
 aliases:
   - talks
+  - tech/talks/list
 tags:
   - ai
+  - lists
 ---
 
 - [Steve's Google vs Amazon Rant](https://news.ycombinator.com/item?id=3101876)
