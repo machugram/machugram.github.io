@@ -10,6 +10,7 @@ aliases:
 Engineering notes on programming, platforms, security, networking, and how the tools got here.
 
 - [[tech/stack | Stack]] — languages and infra I actually ship with
-- [[tech/talks | Tech talks]] — talks and papers worth keeping
+- [[tech/lists | Lists]] — favourite talks, essays, and papers
+- [[canvas | Canvas]] — AI, finance, learning, experimental notes
 
 Essays, RFCs, and systems writeups are listed below.

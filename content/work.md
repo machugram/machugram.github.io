@@ -8,7 +8,7 @@ Software Engineer, SRE — reliability & observability for regulated markets, pl
 
 ## Bank of America
 
-Software Engineer, SRE · Dublin · Present
+Software Engineer, SRE · Dublin
 
 Reliability and platform engineering for **short selling regulatory reporting** across jurisdictions. Equity Position and Monitoring (EPMD) flows that keep global short-sale disclosure accurate, auditable, and on time.
 
