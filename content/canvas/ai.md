@@ -3,7 +3,10 @@ title: AI
 summary: "Canvas for AI — links, notes, and raw thoughts as they land."
 date: 2026-11-07
 draft: false
+aliases:
+  - tech/ai
 tags:
+  - canvas
   - ai
 ---
 
