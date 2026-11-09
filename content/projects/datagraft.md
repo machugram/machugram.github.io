@@ -1,7 +1,7 @@
 ---
 title: Datagraft — Git Checkout for Live Postgres
 displayTitle: Datagraft
-summary: "git checkout for a live Postgres: fork origin into an isolated server, optionally ~N rows."
+summary: "git checkout for a live Postgres. Origin stays up. The branch is a second server, optionally fifty rows."
 draft: false
 date:  2026-09-03
 github: https://github.com/machugram/datagraft
@@ -12,13 +12,15 @@ featured: false
 order: 5
 ---
 
-**Datagraft** is `git checkout` for a live PostgreSQL: fork the database you already have into an isolated server, optionally take ~N rows instead of the whole thing, and leave origin up. It is not a new engine, not a cluster, and not merge. A branch is a second Postgres. Reset recreates it. There is no `datagraft merge`.
+**Datagraft** is `git checkout` for a live Postgres. Origin stays up. The branch is a second server on a free port, optionally fifty rows instead of the whole thing.
+
+It is not a new engine, not a cluster, and not merge. A branch is a second Postgres. Reset recreates it. There is no `datagraft merge`.
 
 ```bash
 datagraft checkout postgres-v1 --sample 50
 ```
 
-```
+```text
                     never written
                          │
    origin  ──────────────┤  :5432   1,000,000 rows
@@ -34,70 +36,30 @@ This is still an experiment. The pass condition is a real app booting on that fo
 
 Code is branched. The database usually is not.
 
-I kept hitting that on a particular app: EF Core, uuid primary keys, jsonb, quoted `"Id"` columns, dual FKs to `users`. Every “what if we add this column,” every migration, every seed experiment either ran against the shared Postgres or waited until staging. QA and other developers ate the blast radius, or nobody tried anything. The workaround was `pg_dump` / restore: slow, stale, still one copy. You cannot have `postgres-v1` and `broken-fk-experiment` at the same time without two restores.
+I kept hitting that on one app: EF Core, uuid primary keys, jsonb, quoted `"Id"` columns, dual FKs to `users`. Every “what if we add this column,” every migration, every seed experiment either ran against the shared Postgres or waited until staging. QA ate the blast radius, or nobody tried anything.
 
-Hosted branching (Neon, Postgres.ai) isolates in the cloud. It is not a laptop CLI, and it does not make the data smaller. Git-like engines (Doltgres) solve merge by not being Postgres. The app’s extensions, SQL, and ORM are not the same product.
+`pg_dump` / restore is slow, stale, and still one copy. You cannot have `postgres-v1` and `broken-fk-experiment` at the same time without two restores. Neon isolates in the cloud. It is not a laptop CLI, and it does not make the data smaller. Doltgres solves merge by not being Postgres. The app’s extensions and ORM are not that product.
 
-I wanted the gap in between: real Postgres, installable, isolated, optionally fifty rows. That app’s schema was the first the experiment had to survive. Checkout in about five seconds. Isolation held — DDL on the fork never appeared on origin. App-boot SQL passed. The app process itself is still the next proof.
+I wanted real Postgres, installable, isolated, optionally fifty rows. That schema was the first the experiment had to survive. Checkout in about five seconds. DDL on the fork never appeared on origin. App-boot SQL passed. The app process itself is still the next proof.
 
-I did not want a Kubernetes operator, a CoW volume clone, or a fake merge. I wanted `datagraft checkout` the way I already `git checkout`. Reset is how you iterate. Merge waits until a real boot says otherwise.
+I did not want a Kubernetes operator, a CoW volume clone, or a fake merge. I wanted `datagraft checkout` the way I already `git checkout`. Reset is how you iterate.
 
 ## Tech Stack
 
-- **Go** — installable CLI (`datagraft`), no cluster required
-- **PostgreSQL** — the engine is real Postgres; schema via `pg_dump --schema-only`, data via a logical subset
-- **Docker or local `pg_ctl`** — throwaway postmaster on a free port; Docker if the daemon answers in 3s, else Homebrew-style local Postgres
-- **FK-safe sampler** — topological copy, PK required, parents before children; dual FKs close the other side instead of AND-sampling to zero rows
+- **Go** — a CLI you can `go install`. No cluster
+- **PostgreSQL** — real Postgres. Schema from `pg_dump --schema-only`, data as a logical subset
+- **Docker or local `pg_ctl`** — throwaway postmaster on a free port, never origin’s
+- **FK-safe sampler** — parents before children. Dual FKs close the other side instead of AND-sampling to zero rows
 
-## Architecture Overview
+## What it does
 
-Datagraft never writes origin. Isolation is a second postmaster, not a `DELETE` that “makes it smaller.”
+- `checkout postgres-v1` starts a second server. Origin keeps its port and its clients
+- `--sample 50` copies about fifty rows plus the FK parents, so a small fork is actually small
+- `--keep-pk` and `--include-sql` keep the admin user and `schema_migrations` so the app can boot
+- `reset` throws the fork away and rebuilds it. That is the iterate loop
+- Hosts that look like RDS / Neon / Supabase are refused unless you pass `--i-know`
 
-1. **`init`** — records origin (read-only from here on). Hosts that look like RDS / Neon / Supabase are refused unless you pass `--i-know`
-2. **`checkout`** — starts a throwaway Postgres on a free port (never origin’s). Restores schema, then copies an FK-closed subset if `--sample N` is set
-3. **Keep / seed** — `--keep-pk` and `--include-sql` keep the admin user, migrations table, and other rows the app needs to start
-4. **`reset`** — throws the instance away and rebuilds it. That is the iterate loop. Not merge
-5. **State** — `.datagraft/state.json` plus metrics; `env` / `status` / `diff` / `drop` / `gc` around the same model
-
-```mermaid
-sequenceDiagram
-    autonumber
-    participant You
-    participant CLI as datagraft
-    participant Origin as origin Postgres
-    participant Branch as branch Postgres
-
-    You->>CLI: init with origin URL
-    CLI->>Origin: connect (read)
-    You->>CLI: checkout postgres-v1 sample 50
-    CLI->>Branch: start on a free port
-    CLI->>Origin: pg_dump schema-only
-    CLI->>Branch: restore schema
-    CLI->>Origin: read-only subset of rows
-    CLI->>Branch: copy subset and setval
-    CLI-->>You: branch URL on a new port
-    Note over Origin: still serving everyone else
-```
-
-An early design treated this as GitOps CRDs and a Kubernetes operator. That failed the install-and-run test. The interface is a CLI. GitOps, if it ever appears, wraps the same binary.
-
-## Key Features
-
-- **Named branches** — `checkout postgres-v1` is a second server, not a schema prefix on origin
-- **`--sample N`** — logical copy of ~N rows plus FK parents; small forks are actually small
-- **`--keep-pk` / `--include-sql`** — keep the rows a real app needs (admin, `schema_migrations`)
-- **Reset, not merge** — recreate the fork from parent with the same sample policy
-- **Origin stays up** — other clients keep their URL; origin port is never stolen
-- **Safety rails** — refuse prod-looking hosts unless `--i-know`; origin credentials are not the printed branch URL
-- **Doctor / status / env / diff** — explain failed checkouts, remind you origin still has N rows, point the app at the fork
-
-## What this is not
-
-Not Neon. Not Doltgres. Not a Kubernetes operator. Not CoW volume clones. Not merge, remotes, or GitOps. Those are deferred until `reset` plus a real app boot say the loop is worth keeping.
-
-## Try it
-
-Needs Go 1.25+, `pg_dump` / `psql`, and either Docker or Homebrew `postgresql@16`.
+Not Neon. Not Doltgres. Not merge. Those wait until a real app boot says the loop is worth keeping.
 
 ```bash
 go install github.com/machugram/datagraft/cmd/datagraft@latest

@@ -10,31 +10,30 @@ featured: false
 order: 9
 ---
 
-**tfai** is a SwiftUI iOS companion for Dublin Luas riders. Scan a Leap Card over NFC, keep a journey log, and turn real riding into travel-readiness cues and recap-style insights — alongside a tram map, journey planner, and stop-level browsing for the Red and Green lines. It is the everyday answer to two questions: should I leave now, and what does my travel actually look like?
+**tfai** is a SwiftUI iOS companion for Dublin Luas. Scan a Leap Card over NFC, keep a journey log, and answer two questions: should I leave now, and what do my rides actually look like.
 
-Voice-first Luas lookups live in [[alexa-luas | Alexa Luas]]. The Leap Card → phone migration is [[luas | Luas — Digital Leap Pass]].
+The plastic card can board. It cannot talk to software. I wanted the phone to be honest about that, and still useful on the Red and Green lines.
+
+Voice-first lookups live in [[alexa-luas | Alexa Luas]]. The Leap Card → phone migration is [[luas | Luas — Digital Leap Pass]]. Neither of those is this app.
+
+## Why I built it
+
+Leap purse and journey files sit behind Transport for Ireland authentication. A third-party NFC read can see UID, DESFire version, and that the Leap application is present. It cannot read balance or history. Anything built on manual balance entry is an estimate, and I would rather say so.
+
+So the scan verifies the card. Journeys persist from scans and manual logs, on device. Streaks, line usage, spend, and CO₂ come from that log, not from a made-up feed. Simulator and DEBUG builds fall back to a deterministic demo scan.
+
+The phone is not a ticket. Copy that implied tap-to-board would be a lie. The map, the planner, and leave-now guidance are the product until an operator-issued pass exists.
 
 ## Tech Stack
 
-- **Swift / SwiftUI** — native iOS app with tabbed Home, Card, Map, Insights, and Profile
-- **Core NFC** — DESFire tag sessions against physical Leap cards (UID, version, Leap application presence)
-- **MapKit / CoreLocation** — tram map, stop browsing, and on-device location
-- **On-device storage** — journey history, streaks, and badges in Application Support; no backend required
+- **Swift / SwiftUI** — Home, Card, Map, Insights, Profile
+- **Core NFC** — DESFire sessions against a physical Leap card
+- **MapKit / CoreLocation** — tram map and stop browsing
+- **On-device storage** — journeys, streaks, and badges in Application Support. No backend
 
-## Architecture Overview
+## What it does
 
-tfai stays on the phone and treats the Leap Card as the data wedge:
-
-1. **NFC capture** — `NFCService` talks DESFire to a physical Leap card; simulator and DEBUG builds fall back to a deterministic demo scan
-2. **Journey store** — scans and manual logs persist locally, dedupe on re-scan, and feed trip stats (streaks, line usage, spend, CO₂)
-3. **Insights layer** — readiness summaries and `GamificationEngine` derive leave-now guidance, badges, XP, and weekly challenges from collected journeys
-4. **Travel surfaces** — map, planner, and home alerts help interpret the next trip without a server
-
-Leap purse and journey files sit behind Transport for Ireland authentication, so balance stays manual until a partnership; the locked-read response is still used as card verification.
-
-## Key Features
-
-- **NFC Leap verification** — confirm a real card on device without implying the phone is a ticket
-- **Travel readiness** — leave-now guidance from card state, recent trips, and service alerts
-- **Journey insights** — streaks, recap views, and achievements grounded in logged rides
-- **Red and Green line map** — stop browsing and journey planning for the Luas network
+- Confirm a real Leap card on device without claiming the phone can board
+- Leave-now from card state, recent trips, and service alerts
+- Journey log, streaks, and badges computed from rides you actually recorded
+- Red and Green line map, stop browsing, and a planner

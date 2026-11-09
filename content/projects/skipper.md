@@ -1,7 +1,7 @@
 ---
 title: Skipper — Interactive SSH Host Picker
 displayTitle: Skipper
-summary: "Fuzzy-search your SSH config and connect without memorizing host aliases."
+summary: "Fuzzy-search ~/.ssh/config and hit Enter. The same binary can add a host without opening the file."
 draft: false
 date:  2026-04-03
 github: https://github.com/machugram/skipper
@@ -12,17 +12,34 @@ featured: false
 order: 6
 ---
 
-**Skipper** is a CLI tool that transforms SSH connection management into a fast, interactive experience. Read your `~/.ssh/config` once, then browse, search, and connect to any host without memorizing aliases — fuzzy-search narrows down the list in real time, and one keystroke drops you into a session. Skipper eliminates SSH friction: no more digging through notes or config files, no more typos in rarely-used host aliases. It makes remote access as natural as browsing a file picker.
+**Skipper** reads `~/.ssh/config`, lets you type a few letters, and Enter is the session.
+
+I was still opening the file to remember which alias was the bastion. `ssh` does not search. A notes app of hostnames goes stale the week you add a port. I wanted the config I already have, as a picker.
+
+```text
+skipper
+# / to filter, Enter to connect
+
+skipper add bastion admin@10.0.0.5
+```
+
+The file is the source of truth. Skipper does not invent a second host list.
+
+## Why I built it
+
+Rarely-used aliases are where the typos live. I wanted fuzzy search over the aliases, users, hostnames, and ports already in the config, then one keystroke into `ssh`.
+
+When there is only one match you can skip the UI. `add` writes a host entry so you do not open the file for that either. Interactive form, or `skipper add alias user@host:port`.
 
 ## Tech Stack
 
-- **Go** — lightweight, cross-platform CLI with zero runtime dependencies
-- **Bubbletea** — interactive terminal UI for smooth filtering and navigation
-- **SSH Config Parsing** — reads aliases, users, hostnames, ports, and identity files natively
+- **Go** — one binary, no runtime
+- **Bubbletea** — the list, the filter, the add form
+- **`~/.ssh/config`** — aliases, users, hostnames, ports, identity files. Unmodified except when you `add`
 
-## Features
+## What it does
 
-- **Interactive host selection** — filterable list powered by real-time fuzzy search
-- **SSH config integration** — parses your existing config without modification
-- **One-keystroke connection** — select and SSH in the same interface
-- **Add hosts on the fly** — interactive form or command-line shorthand
+- Filter the host list as you type. Enter connects
+- `-c` for a config that is not the default
+- `-f` opens already in find mode
+- `j` / `k` or arrows to move. `q` to quit

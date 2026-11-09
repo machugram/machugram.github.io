@@ -32,13 +32,14 @@ export const GitHubFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> | 
             {
               behavior: "append",
               properties: {
+                className: ["permalink"],
                 ariaHidden: true,
                 tabIndex: -1,
                 "data-no-popover": true,
               },
               content: {
                 type: "text",
-                value: " §",
+                value: "#",
               },
             },
           ],

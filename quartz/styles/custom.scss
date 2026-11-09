@@ -166,7 +166,7 @@ article {
 // LINKS IN ARTICLES
 // ─────────────────────────────────────────────
 
-article a:not(.tag-link) {
+article a:not(.tag-link):not(.permalink) {
   color: var(--darkgray);
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--gray) 40%, transparent);
@@ -178,6 +178,18 @@ article a:not(.tag-link) {
   &:hover {
     text-decoration-color: var(--tertiary) !important;
     color: var(--dark) !important;
+  }
+}
+
+article a.permalink {
+  color: var(--gray) !important;
+  text-decoration: none !important;
+  background: none !important;
+  font-weight: 400 !important;
+
+  &:hover {
+    color: var(--gray) !important;
+    text-decoration: none !important;
   }
 }
 
