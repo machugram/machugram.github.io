@@ -1,7 +1,7 @@
 ---
 title: Mini DBaaS — Self-Service Postgres on Demand
 displayTitle: Mini DBaaS
-summary: "Self-service Postgres on demand: isolated containers, quotas, and credential rotation."
+summary: "Self-service Postgres: the API writes desired state, a worker starts a container, the password comes back once."
 draft: false
 date:  2026-07-05
 github: https://github.com/machugram/minidbaas
@@ -12,30 +12,40 @@ featured: true
 order: 3
 ---
 
-**Mini DBaas** is a self-service platform that provisions and manages Postgres instances on demand. Teams can spin up isolated databases without waiting for infrastructure — each instance gets its own container, managed roles, encrypted credentials, and automatic backups. The control plane is a FastAPI service that enforces quotas, handles credential rotation, patches instances, and cleans up expired databases automatically. It eliminates the toil of manual Postgres provisioning while keeping each tenant's data strictly isolated.
+**Mini DBaaS** is a self-service control plane for Postgres. A team asks for a database. The API writes desired state and returns `202`. The password is in that response once. A worker starts a Docker container with its own volume, port, and credentials.
+
+I was the person who ran `docker run postgres` for other people. Then someone needed a backup, a rotation, a second team, a thing that expires on Friday. I wanted that loop as an API, not a Slack message.
+
+```bash
+mdbaas instances create app-db --team acme --size small
+mdbaas instances status <instance-id>
+```
+
+The metadata Postgres is the source of truth. It is never one of the tenants. Tenant containers are labelled `mdbaas.managed=true` and bound to `127.0.0.1` on a port from the configured range.
+
+## Why I built it
+
+Manual Postgres provisioning is a queue of one. Quotas live in someone's head. Passwords end up in a doc. Backups happen when someone remembers.
+
+RDS is the real product for this, and it is a bill and an account. I wanted the same shape on a laptop: create, patch, dump, expire. The API does not hold the Docker handle. It writes desired state. A worker and a reconciler drive until observed matches. A crash does not leave a half-created container as the API's problem.
+
+Tests use SQLite and a fake provisioner. They never need Docker.
 
 ## Tech Stack
 
-- **Python** — FastAPI control plane with async workers for orchestration
-- **Docker** — tenant Postgres instances run as isolated containers
-- **Postgres** — metadata store for desired state and reconciliation
-- **Cryptography** — encrypted credential storage (Fernet)
+- **Python / FastAPI** — control plane. Desired state in, `202` out
+- **Docker** — one container per tenant instance. The provisioner is the only code that talks to it
+- **Postgres** — metadata store, separate from the tenants
+- **Fernet** — encrypted credentials. The create response is the one time you see the password
 
-## Architecture Overview
+## What it does
 
-Mini DBaas splits control and data planes cleanly:
+- Create an isolated Postgres in seconds, with a team quota check
+- Rotate credentials, patch, and dump. Scheduled backups, then delete past retention
+- Reconcile drift. TTL reaper for instances that were meant to die on Friday
+- API and a thin `mdbaas` CLI against the same routes
 
-1. **API Layer** — FastAPI routers validate requests, authenticate with API keys, and delegate to services
-2. **Service Layer** — enforces policy, writes desired state to metadata DB, enqueues jobs
-3. **Lifecycle Workers** — job queue, reconciler (desired-state enforcement), backup scheduler, TTL reaper
-4. **Provisioner** — Docker SDK wrapper that is the only code touching containers
-
-The metadata DB is the source of truth; the reconciler watches for drift and repairs it. Each instance gets unique ports, encrypted superuser credentials, and advisory-locked quota tracking.
-
-## Key Features
-
-- **On-demand provisioning** — create a Postgres instance in seconds
-- **Team-based multi-tenancy** — quota enforcement per team, credential isolation
-- **Managed lifecycle** — automated backups, patching, credential rotation, TTL cleanup
-- **Desired-state reconciliation** — infrastructure automatically converges to declared state
-- **API + CLI** — use curl or the bundled Python CLI client
+```bash
+export MDBAAS_CREDENTIAL_ENCRYPTION_KEY=$(python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())")
+docker compose up --build
+```

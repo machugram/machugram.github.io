@@ -9,31 +9,30 @@ featured: false
 order: 10
 ---
 
-**Alexa Luas** is a custom Alexa skill that answers Dublin Luas questions by voice. Ask for the next tram from Ranelagh, plan a Red ↔ Green journey, or say "what's my tram" after saving a home stop. The backend is Node.js on AWS Lambda (ASK SDK), live times come from the official Luas forecast XML API, and DynamoDB holds a short-TTL cache plus user preferences. The rule the skill is built around: never invent a departure time.
+**Alexa Luas** is a custom Alexa skill for Dublin Luas. Ask for the next tram from Ranelagh, plan a Red ↔ Green journey, or say "what's my tram" after saving a home stop.
+
+Live times come from the official Luas forecast XML. If that API is down, the skill speaks expired cache when it has one and admits it cannot fetch times when it does not. It never invents a departure.
 
 The on-phone companion is [[tfai | tfai]]. The Leap Card → phone migration is [[luas | Luas — Digital Leap Pass]].
 
+## Why I built it
+
+I wanted Luas in the kitchen without unlocking a phone. Most voice transit skills guess, or they read a static timetable. The official forecast is XML and a bit awkward. That is still better than a made-up minute.
+
+Alexa owns speech. The skill owns stop names, the cache, and the rule about not fabricating times. Stop resolution is exact, then synonyms, then partial. Cache TTL is 60 seconds. Home stop is keyed by Alexa `userId`.
+
+en-GB first (amazon.co.uk), plus en-IE and en-US. SSML for Irish place names, because Alexa will otherwise say them wrong.
+
 ## Tech Stack
 
-- **Node.js / ASK SDK** — intent handlers on AWS Lambda, shared with a local HTTPS and Docker runtime
-- **Alexa** — en-GB first (amazon.co.uk), plus en-IE and en-US interaction models; SSML for Irish place names
+- **Node.js / ASK SDK** — intent handlers on Lambda. Same skill runs locally over HTTPS or Docker
+- **Alexa** — en-GB, en-IE, en-US interaction models
 - **Luas Forecasts API** — official XML departures and service status
-- **DynamoDB** — short-TTL cache and saved home stop; Docker Compose for local tables
+- **DynamoDB** — short-TTL cache and the saved home stop
 
-## Architecture Overview
+## What it does
 
-Alexa owns speech and NLU. The skill owns domain logic:
-
-1. **Alexa Voice Service** — routes utterances through the interaction model to Lambda
-2. **Skill runtime** — `skill.js` registers one handler per intent; production is Lambda, local is Docker Lambda RIE or HTTPS
-3. **Luas service** — resolves stop names (exact → synonyms → partial), fetches forecast XML, caches under a 60s TTL
-4. **Preferences** — home stop keyed by Alexa `userId`
-
-If the upstream API is down, the skill speaks expired cache when it has one and admits it cannot fetch times when it does not. It never fabricates minutes.
-
-## Key Features
-
-- **Real-time departures** — up to three soonest trams with destination and due phrasing
-- **Home stop / "my tram"** — save a stop once, then ask without naming it
-- **Journey planning** — same-line estimates and Red ↔ Green transfer via Abbey Street / O'Connell GPO
-- **Service status and stop info** — disruptions, hours, fares, and SSML pronunciation for Irish names
+- Up to three soonest trams, destination and due phrasing
+- Save a home stop, then ask without naming it
+- Same-line estimates and Red ↔ Green transfer via Abbey Street / O'Connell GPO
+- Disruptions, hours, fares, and SSML for Irish names

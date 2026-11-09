@@ -1,17 +1,17 @@
 ---
 title: rex.
-summary: "Rexford Machu — Software Engineer, SRE at Bank of America, Dublin. Reliability for regulated markets and short-sale disclosure. Open to Software Engineer, SRE, and finance engineering roles."
+summary: "Rexford Machu — Software Engineer, SRE.  Dublin."
 draft: false
 ---
 
-Software Engineer, SRE · [Bank of America](https://www.bankofamerica.com) · Dublin
+Software Engineer, SRE · Ex-[Bank of America](https://www.bankofamerica.com) · Dublin
 
 Short-sale disclosure / reliability
 
-Go · Python · TypeScript · C# · Swift · Kubernetes · Kafka · PostgreSQL · AWS · Terraform · Docker
+Python · Go · TypeScript · C# · Swift · Kubernetes · Kafka · PostgreSQL · AWS · Terraform · Docker · AI evals
 
-[[work | Work]] · [[projects/diagrampad | DiagramPad]] · [[projects/orbit-mcp | Orbit]] · [[projects/mdbaas | Mini DBaaS]] · [[projects/ | projects]]
+[[work | Work]] · [[projects/coffer | Coffer]] · [[projects/diagrampad | DiagramPad]] · [[projects/orbit-mcp | Orbit]] · [[projects/mdbaas | Mini DBaaS]] · [[projects/ | projects]]
 
-Open to Software Engineer, SRE, or finance engineering
+Open to Software Engineer, SRE, DevOps , Infrastracture , AI Inference or finance engineering
 
 [GitHub](https://github.com/machugram) · [LinkedIn](https://www.linkedin.com/in/rexfordmachu) · [Cursor](https://cursor.com/@findrex)

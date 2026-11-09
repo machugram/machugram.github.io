@@ -1,7 +1,7 @@
 ---
-title: Orbit — Agentic VM Orchestration
+title: Orbit — Disposable Linux VMs for Agents
 displayTitle: Orbit
-summary: "An MCP server that gives agents disposable Linux VMs, with SSH keys and a secret vault."
+summary: "Disposable Linux VMs for coding agents. Keys and secrets live in a vault on this Mac and die with the session."
 draft: false
 date:  2026-06-19
 github: https://github.com/machugram/orbit
@@ -12,9 +12,19 @@ featured: true
 order: 2
 ---
 
-**Orbit** is an MCP server written in Go that gives AI agents their own disposable, isolated Linux environments to work in. Each session spins up a fresh VM complete with per-session SSH keys, encrypted secret vaults, and full lifecycle automation — so agents can build, run, and tear down real infrastructure without ever touching the host. Orbit makes it easier for developers to hand agents genuine compute while keeping every workload sandboxed, reproducible, and secure.
+**Orbit** is an MCP server on this Mac. An agent asks for a Linux VM, gets SSH keys, does the work, and the machine goes away. The host is never the sandbox.
 
-## Technical presentation
+Cursor and Claude can already run a shell on the laptop. That is the problem. I wanted them in an isolated OrbStack VM, with keys that never hit disk.
+
+## Why I built it
+
+I was handing agents the same machine I use. A bad `rm`, a hung package install, a leaked token — that is my homelab, not a scratch pad.
+
+Docker on the host is still the host. A cloud VM is a bill and a wait. OrbStack already runs Linux here. I wanted create, exec, destroy as tools an agent can call, and a vault that dies with the session.
+
+The private key stays in memory. The vault on disk is Argon2id and AES-256-GCM. When the session ends, the VM is gone and the decrypted signer is gone with it.
+
+macOS and OrbStack only. Not affiliated with other projects named Orbit.
 
 <iframe
   src="./orbit-presentation.html"
@@ -27,16 +37,20 @@ order: 2
 
 ## Tech Stack
 
-- **Go** — high-performance, compiled backend for VM lifecycle management
-- **Linux VMs** — isolated compute environments with full OS capabilities
-- **MCP Protocol** — standard interface for AI agents to invoke infrastructure operations
+- **Go** — one cgo-free binary. `x/crypto/ssh` keeps the signer in memory
+- **OrbStack** — isolated Linux VMs through `orbctl`
+- **Local vault** — Ed25519 keys, Argon2id, AES-256-GCM, SQLite
+- **MCP** — create, exec, destroy from Cursor or Claude, over stdio
 
-## Architecture Overview
+## What it does
 
-Orbit operates as a three-layer system:
+- Spin up an isolated Linux VM, run a command over SSH, tear it down
+- Per-session keys and secrets in a vault on this Mac
+- Docker and Compose on OrbStack when the work is a container, not a VM
+- Nested QEMU guests when the work needs its own kernel
 
-1. **MCP Server** — receives tool calls from AI agents via the Model Context Protocol
-2. **VM Orchestrator** — manages lifecycle (create, configure, destroy) and resource allocation
-3. **Secret Vault** — encrypts and isolates per-session credentials and SSH keys
+In Cursor I can say the thing I mean:
 
-Each agent session gets a fresh, ephemeral VM with its own network namespace, filesystem, and credential store. When the session ends, the VM and all state are destroyed automatically.
+```text
+Give me a fresh Ubuntu VM. Run the tests. Tear it down.
+```

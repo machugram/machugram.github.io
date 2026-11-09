@@ -271,18 +271,24 @@ h3,
 h4,
 h5,
 h6 {
-  &[id] > a[href^="#"] {
-    margin: 0 0.5rem;
+  &[id] > a.permalink {
+    margin: 0 0 0 0.4rem;
     opacity: 0;
-    transition: opacity 0.2s ease;
-    transform: translateY(-0.1rem);
+    transition: opacity 0.15s ease;
     display: inline-block;
     font-family: var(--codeFont);
+    font-size: 0.72em;
+    font-weight: 400;
+    color: var(--gray);
+    text-decoration: none;
+    background: none;
+    padding: 0;
     user-select: none;
+    vertical-align: 0.08em;
   }
 
-  &[id]:hover > a {
-    opacity: 1;
+  &[id]:hover > a.permalink {
+    opacity: 0.45;
   }
 }
 
